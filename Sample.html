@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Department of IT</title>
+  <!-- css -->
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="/assets/css/course.css" />
+  <!-- CSS here -->
+  <link rel="stylesheet" href="/assets/css/meanmenu.min.css" />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="/assets/images/Engg Logo.png" type="image/x-icon" />
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <style>
+    .lab {
+      height: auto;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      width: 100%;
+      overflow: hidden;
+      padding-bottom: 20px;
+    }
+
+
+    a {
+      text-decoration: none !important;
+    }
+
+
+    .subnav,
+    .subnav1,
+    .subnav2,
+    .subnav3,
+    .subnav4,
+    .subnav5,
+    .subnav6 {
+      padding: 10px !important;
+      margin: 5px 0 !important;
+    }
+
+    .subnav,
+    .subnav1,
+    .subnav2,
+    .subnav3,
+    .subnav4,
+    .subnav5,
+    .subnav6 {
+      margin-left: 20px !important;
+      padding: 10px !important;
+      border: 1px solid #eee !important;
+    }
+
+    .sub-sub {
+      margin-left: 30px !important;
+      border: 1px solid #eee !important;
+      padding: 10px !important;
+    }
+
+    .list li {
+      font-size: 17px;
+      font-weight: 500;
+      padding: 10px 0;
+    }
+
+    .banner {
+      background-image: url(/assets/images/department/be-cs/department-bg.jpg);
+      background-position: top;
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding: 200px 0 40px 0;
+    }
+
+    .card {
+      overflow: visible;
+      width: 250px;
+      height: 420px;
+    }
+
+    .card img {
+      height: 250px;
+      width: 100%;
+      object-fit: contain;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        height: 450px !important;
+        width: auto !important;
+        margin-top: 40px !important;
+      }
+
+      .card img {
+        height: 300px !important;
+        width: 100% !important;
+        object-fit: contain !important;
+      }
+    }
+  </style>
+  <!-- Offcanvas area start -->
+  <div class="fix">
+    <div class="offcanvas__info">
+      <div class="offcanvas__wrapper">
+        <div class="offcanvas__content">
+          <div class="offcanvas__top d-flex justify-content-between align-items-center">
+            <div class="offcanvas__logo">
+              <a href="index.html">
+                <img src="/assets/images/Engg Logo1.png" alt="logo not found" />
+              </a>
+            </div>
+            <div class="offcanvas__close">
+              <button>
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+          </div>
+          <div class="offcanvas__search mb-25"></div>
+          <div class="mobile-menu fix mb-40"></div>
+
+          <div class="offcanvas__social">
+            <ul>
+              <li>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="offcanvas__overlay"></div>
+  <div class="offcanvas__overlay-white"></div>
+  <!-- Offcanvas area start -->
+
+  <!-- Header area start -->
+  <div id="header-container"></div>
+
+  <!-- Header area start -->
+  <script>
+    // Function to fetch and insert the header
+    function includeHeader() {
+      // Create a new XMLHttpRequest object
+      var xhr = new XMLHttpRequest();
+      // Define the path to your header file
+      var headerUrl = "/includes/header.html";
+
+      // Callback function to handle the response
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          // Insert the header content into the container
+          document.getElementById("header-container").innerHTML =
+            xhr.responseText;
+        } else {
+          console.error("Failed to load header: " + xhr.status);
+        }
+      };
+
+      // Send the request
+      xhr.open("GET", headerUrl, true);
+      xhr.send();
+    }
+
+    // Call the function to include the header
+    includeHeader();
+  </script>
+
+  <div class="preloader">
+    <img src="/assets/images/Engg Logo1.png" alt="" />
+    <div class="dot-loader">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </div>
+
+  <!-- main-banner -->
+  <div class="banner">
+    <div class="title">
+      <h2>BTech. Information Technology</h2>
+      <p>
+        <a href="index.html">Home</a>
+        <i class="fa-solid fa-caret-right"></i> Department
+      </p>
+    </div>
+  </div>
+
+  <div class="main-content-area">
+    <!-- <div class="vector">
+        <img src="/assets/images/vector3.png" alt="" />
+      </div> -->
+    <div class="container-fluid">
+      <div class="tab-main align-items-start">
+        <div class="btn-holder">
+          <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <button onclick="scrollToTop()" class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
+              data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">
+              Home
+            </button>
+
+
+
+
+
+
+            <button onclick="scrollToTop()" class="nav-link" id="v-pills-faculty-tab" data-bs-toggle="pill"
+              data-bs-target="#v-pills-faculty" type="button" role="tab" aria-controls="v-pills-faculty"
+              aria-selected="false">
+              Faculty
+            </button>
+
+            <!-- Original Button -->
+            <button onclick="scrollToTop()" class="nav-link" id="v-pills-students-tab" data-bs-toggle="pill"
+              data-bs-target="#v-pills-students" type="button" role="tab" aria-controls="v-pills-students"
+              aria-selected="false">
+              Students Corner
+              <div class="right-arrow" id="arrow-icon">
+                <i onclick="toggleSubnav(this)" class="fa-solid fa-plus"></i>
+              </div>
+            </button>
+
+            <!-- Submenu Buttons (Initially Hidden) -->
+            <button class="nav-link subnav" style="display: none" onclick="scrollToTop()" data-bs-toggle="pill"
+              data-bs-target="#v-pills-Industrial-Visit" type="button" role="tab"
+              aria-controls="v-pills-Industrial-Visit" aria-selected="false">
+              Industrial Visit
+            </button>
+
+
+            <button class="nav-link subnav" style="display: none" onclick="scrollToTop()" data-bs-toggle="pill"
+              data-bs-target="#v-pills-Guest-Lecture" type="button" role="tab" aria-controls="v-pills-Guest-Lecture"
+              aria-selected="false">
+              Guest Lecture
+            </button>
+            <!-- sub-sub -->
+
+            <button class="nav-link subnav" style="display: none" onclick="scrollToTop()" data-bs-toggle="pill"
+              data-bs-target="#v-pills-National-Level-Symposium" type="button" role="tab"
+              aria-controls="v-pills-National-Level-Symposium" aria-selected="false">
+              National Level Symposium
+            </button>
+            <button class="nav-link subnav" style="display: none" onclick="scrollToTop()" data-bs-toggle="pill"
+              data-bs-target="#v-pills-clubs" type="button" role="tab" aria-controls="v-pills-clubs"
+              aria-selected="false">
+              Clubs
+            </button>
+          <button class="nav-link subnav" style="display: none" onclick="scrollToTop()" data-bs-toggle="pill"
+              data-bs-target="#v-pills-Academic-Achievements" type="button" role="tab"
+              aria-controls="v-pills-Academic-Achievements" aria-selected="false">
+              Academic Achievements
+            </button>
+            <button class="nav-link subnav" style="display: none" onclick="scrollToTop()" data-bs-toggle="pill"
+              data-bs-target="#v-pills-sports" type="button" role="tab" aria-controls="v-pills-sports"
+              aria-selected="false">
+              Sports
+            </button>
+            <button class="nav-link subnav" style="display: none" onclick="scrollToTop()" data-bs-toggle="pill"
+              data-bs-target="#v-pills-higher-studies" type="button" role="tab" aria-controls="v-pills-higher-studies"
+              aria-selected="false">
+              Higher Studies
+            </button>
+
+            <!-- submenu end -->
+            <!-- orginal button -->
+            <button onclick="scrollToTop()" class="nav-link" id="v-pills-Academics-tab" data-bs-toggle="pill"
+              data-bs-target="#v-pills-Academics" type="button" role="tab" aria-controls="v-pills-Academics"
+              aria-selected="true">
+              Academics
+              <div class="right-arrow" id="arrow-icon6">
+                <i onclick="toggleSubnav6(this)" class="fa-solid fa-plus"></i>
+              </div>
+            </button>
+            <!--  -->
+            <!-- subbutton -->
+            <button onclick="scrollToTop()" class="nav-link subnav6" style="display: none" id="v-pills-Syllabus-tab"
+              data-bs-toggle="pill" data-bs-target="#v-pills-Syllabus" type="button" role="tab"
+              aria-controls="v-pills-Syllabus" aria-selected="true">
+              Syllabus
+            </button>
+            <button onclick="scrollToTop()" class="nav-link subnav6" style="display: none" id="v-pills-Regulations-tab"
+              data-bs-toggle="pill" data-bs-target="#v-pills-Regulations" type="button" role="tab"
+              aria-controls="v-pills-Regulations" aria-selected="true">
+              Regulations
+            </button>
+
+            <button onclick="scrollToTop()" class="nav-link" id="v-pills-Newsletter-tab" data-bs-toggle="pill"
+              data-bs-target="#v-pills-Newsletter" type="button" role="tab" aria-controls="v-pills-Newsletter"
+              aria-selected="true">
+              Newsletter
+            </button>
+            <button onclick="scrollToTop()" class="nav-link" id="v-pills-Lab-tab" data-bs-toggle="pill"
+              data-bs-target="#v-pills-lab" type="button" role="tab" aria-controls="v-pills-lab" aria-selected="true">
+              Lab
+            </button>
+            <!-- orginal -->
+            <button class="nav-link" id="v-pills-Research-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Research"
+              type="button" role="tab" aria-controls="v-pills-Research" aria-selected="true">
+              Research
+              <div id="arrow-icon2" class="right-arrow">
+                <i onclick="toggleSubnav2(this)" class="fa-solid fa-plus"></i>
+              </div>
+            </button>
+            <!--  -->
+            <!-- subnav -->
+            <button onclick="scrollToTop()" class="nav-link subnav2" style="display: none"
+              id="v-pills-Staff-Patents-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Staff-Patents" type="button"
+              role="tab" aria-controls="v-pills-Staff-Patents" aria-selected="true">
+              Staff Patents
+            </button>
+            <button onclick="scrollToTop()" class="nav-link subnav2" style="display: none"
+              id="v-pills-Students-Patents-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Students-Patents"
+              type="button" role="tab" aria-controls="v-pills-Students-Patents" aria-selected="true">
+              Students Patents
+            </button>
+            <button onclick="scrollToTop()" class="nav-link subnav2" style="display: none"
+              id="v-pills-Staff-Publications-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Staff-Publications"
+              type="button" role="tab" aria-controls="v-pills-Staff-Publications" aria-selected="true">
+              Staff Publications
+            </button>
+            <button onclick="scrollToTop()" class="nav-link subnav2" style="display: none"
+              id="v-pills-Students-Publications-tab" data-bs-toggle="pill"
+              data-bs-target="#v-pills-Students-Publications" type="button" role="tab"
+              aria-controls="v-pills-Students-Publications" aria-selected="true">
+              Students Publications
+            </button>
+            <button onclick="scrollToTop()" class="nav-link subnav2" style="display: none"
+              id="v-pills-Funded-Projects-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Funded-Projects"
+              type="button" role="tab" aria-controls="v-pills-Funded-Projects" aria-selected="true">
+              Funded Projects
+            </button>
+            <button onclick="scrollToTop()" class="nav-link subnav2" style="display: none" id="v-pills-Mou-tab"
+              data-bs-toggle="pill" data-bs-target="#v-pills-Mou" type="button" role="tab" aria-controls="v-pills-Mou"
+              aria-selected="true">
+              Mou
+            </button>
+            <button onclick="scrollToTop()" class="nav-link subnav2" style="display: none"
+              id="v-pills-Supervisor-Details-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Supervisor-Details"
+              type="button" role="tab" aria-controls="v-pills-Supervisor-Details" aria-selected="true">
+              Supervisor Details
+            </button>
+
+            <!--  -->
+
+            <!-- orginal -->
+           <button class="nav-link" id="v-pills-Elite-Alumni-tab" data-bs-toggle="pill"
+              data-bs-target="#v-pills-Elite-Alumni" type="button" role="tab" aria-controls="v-pills-Elite-Alumni"
+              aria-selected="true">
+              Elite Alumni
+              <div id="arrow-icon3" class="right-arrow">
+                <i onclick="toggleSubnav3(this)" class="fa-solid fa-plus"></i>
+              </div>
+            </button>
+            <!--  -->
+            <!-- subnav -->
+            <button onclick="scrollToTop()" class="nav-link subnav3" style="display: none" id="v-pills-Testimonial-tab"
+              data-bs-toggle="pill" data-bs-target="#v-pills-Testimonial" type="button" role="tab"
+              aria-controls="v-pills-Testimonial" aria-selected="true">
+              Testimonial
+            </button>
+            <button onclick="scrollToTop()" class="nav-link subnav3" style="display: none" id="v-pills-Video-tab"
+              data-bs-toggle="pill" data-bs-target="#v-pills-Video" type="button" role="tab"
+              aria-controls="v-pills-Video" aria-selected="true">
+              Video
+            </button>
+            <!--  -->
+
+            <!-- orginal -->
+            <button class="nav-link" id="v-pills-Teaching-and-Learning-Process-tab" data-bs-toggle="pill"
+              data-bs-target="#v-pills-Teaching-and-Learning-Process" type="button" role="tab"
+              aria-controls="v-pills-Teaching-and-Learning-Process" aria-selected="true">
+              Teaching and Learning Process
+              <div id="arrow-icon4" class="right-arrow">
+                <i onclick="toggleSubnav4(this)" class="fa-solid fa-plus"></i>
+              </div>
+            </button>
+            <!--  -->
+            <!-- subnav -->
+            <button onclick="scrollToTop()" class="nav-link subnav4" style="display: none" id="v-pills-CO-PO-tab"
+              data-bs-toggle="pill" data-bs-target="#v-pills-CO-PO" type="button" role="tab"
+              aria-controls="v-pills-CO-PO" aria-selected="true">
+              CO-PO
+            </button>
+            <button onclick="scrollToTop()" class="nav-link subnav4" style="display: none" id="v-pills-PSO-tab"
+              data-bs-toggle="pill" data-bs-target="#v-pills-PSO" type="button" role="tab" aria-controls="v-pills-PSO"
+              aria-selected="true">
+              PSO
+            </button>
+            <!--  -->
+           <!-- <button class="nav-link" id="v-pills-Feedback-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Feedback"
+              type="button" role="tab" aria-controls="v-pills-Feedback" aria-selected="true">
+              Feedback
+            </button>-->
+          </div>
+        </div>
+
+        <div class="tab-content contents" id="v-pills-tabContent">
+        <!--  <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+            <div class="about-us">
+              <h2 class="head">Home</h2>
+              Home
+            </div>
+
+          </div>-->
+
+          <div class="tab-pane fade" id="v-pills-faculty" role="tabpanel" aria-labelledby="v-pills-faculty-tab">
+            <div class="container">
+              <h2 class="head">Faculty</h2>
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="card">
+                    <div class="content">
+                      <div class="back">
+                        <div class="back-content">
+                          <img src="images/pugalenthi.jpg" alt="" />
+                          <div class="faculty">
+                            <h3>Mrs. Lathaselvi</h3>
+                            <p>Associate Professor & Head of the Department</p>
+                            <a href="#">Know More</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="card">
+                    <div class="content">
+                      <div class="back">
+                        <div class="back-content">
+                          <img src="images/rajkumar.jpg" alt="" />
+                          <div class="faculty">
+                            <h3>Dr. Heltin Genitha C</h3>
+                            <p>Professor</p>
+                            <a href="#">Know More</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="card">
+                    <div class="content">
+                      <div class="back">
+                        <div class="back-content">
+                          <img src="images/Ramyaj.png" alt="" />
+                          <div class="faculty">
+                            <h3>Dr. Tamizhselvi A</h3>
+                            <p>Associate Professor</p>
+                            <a href="#">Know More</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 mt-5">
+                  <div class="card">
+                    <div class="content">
+                      <div class="back">
+                        <div class="back-content">
+                          <img src="images/DuraRaji.jpg" alt="" />
+                          <div class="faculty">
+                            <h3>Dr. Sumathi S</h3>
+                            <p>Associate Professor</p>
+                            <a href="#">Know More</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 mt-5">
+                  <div class="card">
+                    <div class="content">
+                      <div class="back">
+                        <div class="back-content">
+                          <img src="images/kumarideepika.JPG" alt="" />
+                          <div class="faculty">
+                            <h3>Dr. Duraimurugan S</h3>
+                            <p>Professor</p>
+                            <a href="https://vidwan.inflibnet.ac.in/profile/433913">Know More</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 mt-5">
+                  <div class="card">
+                    <div class="content">
+                      <div class="back">
+                        <div class="back-content">
+                          <img src="images/SATHYA.JPG" alt="" />
+                          <div class="faculty">
+                            <h3>Dr. Elavarasan</h3>
+                            <p>Assistant Professor</p>
+                            <a href="#">Know More</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 mt-5">
+                  <div class="card">
+                    <div class="content">
+                      <div class="back">
+                        <div class="back-content">
+                          <img src="images/SATHYA.JPG" alt="" />
+                          <div class="faculty">
+                            <h3>Ms. Nivethitha Devi M</h3>
+                            <p>Assistant Professor</p>
+                            <a href="#">Know More</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 mt-5">
+                  <div class="card">
+                    <div class="content">
+                      <div class="back">
+                        <div class="back-content">
+                          <img src="images/Ananthi.jpg" alt="" />
+                          <div class="faculty">
+                            <h3>Ms. Janani M</h3>
+                            <p>Assistant Professor</p>
+                            <a href="#">Know More</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 mt-5">
+                  <div class="card">
+                    <div class="content">
+                      <div class="back">
+                        <div class="back-content">
+                          <img src="images/SATHYA.JPG" alt="" />
+                          <div class="faculty">
+                            <h3>Mrs. Divya J</h3>
+                            <p>Assistant Professor</p>
+                            <a href="#">Know More</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 mt-5">
+                  <div class="card">
+                    <div class="content">
+                      <div class="back">
+                        <div class="back-content">
+                          <img src="images/SATHYA.JPG" alt="" />
+                          <div class="faculty">
+                            <h3>Ms. GnanaSoundharam J</h3>
+                            <p>Assistant Professor</p>
+                            <a href="#">Know More</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 mt-5">
+                  <div class="card">
+                    <div class="content">
+                      <div class="back">
+                        <div class="back-content">
+                          <img src="images/SATHYA.JPG" alt="" />
+                          <div class="faculty">
+                            <h3>Mr. Dinesh Kumar D</h3>
+                            <p>Assistant Professor</p>
+                            <a href="#">Know More</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 mt-5">
+                  <div class="card">
+                    <div class="content">
+                      <div class="back">
+                        <div class="back-content">
+                          <img src="images/SenthilKumar.jpg" alt="" />
+                          <div class="faculty">
+                            <h3>Mr. Radhakrishnan K R</h3>
+                            <p>Assistant Professor</p>
+                            <a href="#">Know More</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 mt-5">
+                  <div class="card">
+                    <div class="content">
+                      <div class="back">
+                        <div class="back-content">
+                          <img src="images/SATHYA.JPG" alt="" />
+                          <div class="faculty">
+                            <h3>Ms. Sinthuja P M</h3>
+                            <p>Assistant Professor</p>
+                            <a href="#">Know More</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 mt-5">
+                  <div class="card">
+                    <div class="content">
+                      <div class="back">
+                        <div class="back-content">
+                          <img src="images/SATHYA.JPG" alt="" />
+                          <div class="faculty">
+                            <h3>Ms. Jeya Priya D</h3>
+                            <p>Assistant Professor</p>
+                            <a href="#">Know More</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 mt-5">
+                  <div class="card">
+                    <div class="content">
+                      <div class="back">
+                        <div class="back-content">
+                          <img src="images/SATHYA.JPG" alt="" />
+                          <div class="faculty">
+                            <h3>Ms. Hepsi Ajibah A S</h3>
+                            <p>Assistant Professor</p>
+                            <a href="#">Know More</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 mt-5">
+                  <div class="card">
+                    <div class="content">
+                      <div class="back">
+                        <div class="back-content">
+                          <img src="images/SATHYA.JPG" alt="" />
+                          <div class="faculty">
+                            <h3>Ms. Kavitha A</h3>
+                            <p>Assistant Professor</p>
+                            <a href="#">Know More</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 mt-5">
+                  <div class="card">
+                    <div class="content">
+                      <div class="back">
+                        <div class="back-content">
+                          <img src="images/SATHYA.JPG" alt="" />
+                          <div class="faculty">
+                            <h3>Ms. Utthirakumari R</h3>
+                            <p>Assistant Professor</p>
+                            <a href="#">Know More</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 mt-5">
+                  <div class="card">
+                    <div class="content">
+                      <div class="back">
+                        <div class="back-content">
+                          <img src="images/SATHYA.JPG" alt="" />
+                          <div class="faculty">
+                            <h3>Ms. Shoba R</h3>
+                            <p>Assistant Professor</p>
+                            <a href="#">Know More</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 mt-5">
+                  <div class="card">
+                    <div class="content">
+                      <div class="back">
+                        <div class="back-content">
+                          <img src="images/SATHYA.JPG" alt="" />
+                          <div class="faculty">
+                            <h3>Mr. Abdhur Rahman A</h3>
+                            <p>Assistant Professor</p>
+                            <a href="#">Know More</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 mt-5">
+                  <div class="card">
+                    <div class="content">
+                      <div class="back">
+                        <div class="back-content">
+                          <img src="images/SATHYA.JPG" alt="" />
+                          <div class="faculty">
+                            <h3>Mr. Manikandan J</h3>
+                            <p>Assistant Professor</p>
+                            <a href="#">Know More</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 mt-5">
+                  <div class="card">
+                    <div class="content">
+                      <div class="back">
+                        <div class="back-content">
+                          <img src="images/SATHYA.JPG" alt="" />
+                          <div class="faculty">
+                            <h3>Ms. Nandhini M</h3>
+                            <p>Assistant Professor</p>
+                            <a href="#">Know More</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 mt-5">
+                  <div class="card">
+                    <div class="content">
+                      <div class="back">
+                        <div class="back-content">
+                          <img src="images/SATHYA.JPG" alt="" />
+                          <div class="faculty">
+                            <h3>Ms. Supraja G</h3>
+                            <p>Assistant Professor</p>
+                            <a href="#">Know More</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 mt-5">
+                  <div class="card">
+                    <div class="content">
+                      <div class="back">
+                        <div class="back-content">
+                          <img src="images/SATHYA.JPG" alt="" />
+                          <div class="faculty">
+                            <h3>Ms. Anitha V P</h3>
+                            <p>Assistant Professor</p>
+                            <a href="#">Know More</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 mt-5">
+                  <div class="card">
+                    <div class="content">
+                      <div class="back">
+                        <div class="back-content">
+                          <img src="images/SATHYA.JPG" alt="" />
+                          <div class="faculty">
+                            <h3>Ms. Elakkiya E</h3>
+                            <p>Assistant Professor</p>
+                            <a href="#">Know More</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 mt-5">
+                  <div class="card">
+                    <div class="content">
+                      <div class="back">
+                        <div class="back-content">
+                          <img src="images/SATHYA.JPG" alt="" />
+                          <div class="faculty">
+                            <h3>Ms. Sathyadevi G</h3>
+                            <p>Assistant Professor</p>
+                            <a href="#">Know More</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 mt-5">
+                  <div class="card">
+                    <div class="content">
+                      <div class="back">
+                        <div class="back-content">
+                          <img src="images/Deepa.JPG" alt="" />
+                          <div class="faculty">
+                            <h3>Dr.J.Thresa Jeniffer</h3>
+                            <p>Assistant Professor</p>
+                            <a href="#">Know More</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 mt-5">
+                  <div class="card">
+                    <div class="content">
+                      <div class="back">
+                        <div class="back-content">
+                          <img src="images/SenthilKumar.jpg" alt="" />
+                          <div class="faculty">
+                            <h3>Mrs. S.Benisha</h3>
+                            <p>Assistant Professor</p>
+                            <a href="#">Know More</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
+          <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+            <h2 class="head">
+              Home
+              
+              </h2>
+              <ul>
+<li><p align="justify"><b>The Department of ECE is successfully conducting B.E programme since 1994 and has been accredited by NBA. The Department is also conducting a Post Graduate programme M.E. (Applied Electronics) from the year 2003.
+
+</b></p></li>
+<li><p align="justify"><b>Our department has produced three gold medallists from its inception and has produced more than 80 rank holders. Our students have been recruited in various multinational companies in India and abroad.Many of our students have done their higher studies in various renowned foreign universities.
+</b></p></li>
+<li><p align="justify"><b>
+The Department has highly qualified and motivated academic faculty members. Among them, eleven faculty members are with Ph,D., having extensive teaching / research experience and have several International / National Journals and conference publications to their credit. 10 staff members have registered for Doctoral programme in various fields of Electronics and communication Engineering. They have together 40 International / National Journal publications and 60 National /International conference publications. The department organizes National level Technical Symposium / National Conference/ Workshop to promote closer interaction between academic and research scholars.
+
+</b></p></li>
+<li><p align="justify"><b>
+So far, the Department has successfully conducted 4 National Conferences, 19 Technical Symposium and 16 Workshops. Our faculty and students are highly motivated in doing Research and development work. Every year number of staff members applying for Ph.D programme is in upward trend.
+              
+   </b></p>    </li>       
+              
+          </ul>    
+              
+         <h2 class="head">
+              Vision
+              
+              </h2>   
+            <p align="justify"><b>  To become a world class renowned department where dissemination and application of knowledge in design and analysis of electronic circuits in the field of communication is delivered and to synergistically balance through relentless pursuit of student success towards the economic prosperity of the society and the world at large
+              
+           </b>   </p>
+              
+              <h2 class="head">
+              Mission
+              
+              </h2> 
+              
+             <p align="justify"><b> Professionalism: Achieve excellence in teaching, learning, and educational activities which ensure that each student has the opportunity to attain his or her fullest potential</b>   </p>
+
+          </div>
+          <div class="tab-pane fade" id="v-pills-Lab" role="tabpanel" aria-labelledby="v-pills-Lab-tab">
+            <div class="about-us">
+              <h2 class="head">Program Educational Objectives (PEO)</h2>
+            </div>
+          </div>
+
+          
+
+
+          <div class="tab-pane fade" id="v-pills-students" role="tabpanel" aria-labelledby="v-pills-students-tab">
+            <h2 class="head">Students Corner</h2>
+          </div>
+
+          <div class="tab-pane fade" id="v-pills-Industrial-Visit" role="tabpanel"
+            aria-labelledby="v-pills-Industrial-Visit-tab">
+            <h2 class="head">Industrial Visit</h2>
+            
+          <p align="justify"><b>  An Industrial visit gives the student knowledge and exposure needed to grasp certain engineering techniques and terminologies for easier understanding. An in-plant training increases a student's. opportunity of get a job after graduation. An in-plant training adds more experience to the portfolio of the student
+            
+            </b></p>
+            
+             <h2 class="head">Odd Semester (Academic Year - 2024 - 2025)</h2>
+             <ul class="pdf">
+                <li><a href="#"><h2>Second Year<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
+                <li><a href="#"><h2>Third Year<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
+                <li><a href="#"><h2>Fourth Year<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
+             </ul>
+             
+             <h2 class="head">Even Semester (Academic Year - 2024 - 2025)</h2>
+             <ul class="pdf">
+                <li><a href="#"><h2>Second Year<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
+                <li><a href="#"><h2>Third Year<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
+                <li><a href="#"><h2>Fourth Year<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
+             </ul>
+             
+             
+              
+             <h2 class="head">Odd Semester (Academic Year - 2023 - 2024)</h2>
+             <ul class="pdf">
+                <li><a href="#"><h2>Second Year<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
+                <li><a href="#"><h2>Third Year<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
+                <li><a href="#"><h2>Fourth Year<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
+             </ul>
+             
+             <h2 class="head">Even Semester (Academic Year - 2023 - 2024)</h2>
+             <ul class="pdf">
+                <li><a href="#"><h2>Second Year<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
+                <li><a href="#"><h2>Third Year<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
+                <li><a href="#"><h2>Fourth Year<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
+             </ul>
+             
+             
+            
+            
+          </div>
+
+          
+
+
+          <div class="tab-pane fade" id="v-pills-National-Level-Symposium" role="tabpanel"
+            aria-labelledby="v-pills-National-Level-Symposium">
+            <h2 class="head">National Level Technical Symposium</h2>
+          </div>
+
+          <!--  -->
+          <div class="tab-pane fade" id="v-pills-Guest-Lecture" role="tabpanel"
+            aria-labelledby="v-pills-Guest-Lecture-tab">
+            <h2 class="head">Guest Lecture</h2>
+             
+            
+             <h2 class="head">Odd Semester (Academic Year - 2024 - 2025)</h2>
+             <ul class="pdf">
+                <li><a href="#"><h2>Second Year<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
+                <li><a href="#"><h2>Third Year<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
+                <li><a href="#"><h2>Fourth Year<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
+             </ul>
+             
+             <h2 class="head">Even Semester (Academic Year - 2024 - 2025)</h2>
+             <ul class="pdf">
+                <li><a href="#"><h2>Second Year<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
+                <li><a href="#"><h2>Third Year<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
+                <li><a href="#"><h2>Fourth Year<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
+             </ul>
+             
+             
+              
+             <h2 class="head">Odd Semester (Academic Year - 2023 - 2024)</h2>
+             <ul class="pdf">
+                <li><a href="#"><h2>Second Year<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
+                <li><a href="#"><h2>Third Year<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
+                <li><a href="#"><h2>Fourth Year<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
+             </ul>
+             
+             <h2 class="head">Even Semester (Academic Year - 2023 - 2024)</h2>
+             <ul class="pdf">
+                <li><a href="#"><h2>Second Year<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
+                <li><a href="#"><h2>Third Year<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
+                <li><a href="#"><h2>Fourth Year<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
+             </ul>
+          </div>
+
+         
+
+          <!--  -->
+
+          <div class="tab-pane fade" id="v-pills-clubs" role="tabpanel" aria-labelledby="v-pills-clubs-tab">
+            <h2 class="head">Clubs</h2>
+          </div>
+
+          <div class="tab-pane fade" id="v-pills-Academic-Achievements" role="tabpanel"
+            aria-labelledby="v-pills-Academic-Achievements-tab">
+            <h2 class="head">Academic Achievements</h2>
+          </div>
+
+          <div class="tab-pane fade" id="v-pills-sports" role="tabpanel" aria-labelledby="v-pills-sports-tab">
+            <h2 class="head">sports</h2>
+          </div>
+
+          <div class="tab-pane fade" id="v-pills-higher-studies" role="tabpanel"
+            aria-labelledby="v-pills-higher-studies-tab">
+            <h2 class="head">Higher studies</h2>
+          </div>
+          <!--  -->
+          
+          <div class="tab-pane fade" id="v-pills-Academics" role="tabpanel" aria-labelledby="v-pills-Academics-tab">
+            <h2 class="head">Academics</h2>
+          </div>
+
+          <div class="tab-pane fade" id="v-pills-Syllabus" role="tabpanel" aria-labelledby="v-pills-Syllabus-tab">
+            <h2 class="head">Syllabus</h2>
+          </div>
+          <div class="tab-pane fade" id="v-pills-Regulations" role="tabpanel" aria-labelledby="v-pills-Regulations-tab">
+            <h2 class="head">Regulations</h2>
+          </div>
+          <!--  -->
+
+          <div class="tab-pane fade" id="v-pills-Newsletter" role="tabpanel" aria-labelledby="v-pills-Newsletter-tab">
+            <h2 class="head">Newsletter</h2>
+          </div>
+          <!--  -->
+
+          <div class="tab-pane fade" id="v-pills-Research" role="tabpanel" aria-labelledby="v-pills-Research-tab">
+            <h2 class="head">Research</h2>
+          </div>
+          <div class="tab-pane fade" id="v-pills-Staff-Patents" role="tabpanel" aria-labelledby="v-pills-Staff-Patents-tab">
+            <h2 class="head">Staff Patents</h2>
+          </div>
+          <div class="tab-pane fade" id="v-pills-Students-Patents" role="tabpanel" aria-labelledby="v-pills-Students-Patents-tab">
+            <h2 class="head">Students Patents</h2>
+          </div>
+          <div class="tab-pane fade" id="v-pills-Staff-Publications" role="tabpanel" aria-labelledby="v-pills-Staff-Publications-tab">
+            <h2 class="head">Staff Publications</h2>
+          </div>
+          <div class="tab-pane fade" id="v-pills-Students-Publications" role="tabpanel" aria-labelledby="v-pills-Students-Publications-tab">
+            <h2 class="head">Students Publications</h2>
+          </div>
+          <div class="tab-pane fade" id="v-pills-Funded-Projects" role="tabpanel" aria-labelledby="v-pills-Funded-Projects-tab">
+            <h2 class="head">Funded Projects</h2>
+          </div>
+          <div class="tab-pane fade" id="v-pills-Mou" role="tabpanel" aria-labelledby="v-pills-Mou-tab">
+            <h2 class="head">Mou</h2>
+          </div>
+          <div class="tab-pane fade" id="v-pills-Supervisor-Details" role="tabpanel" aria-labelledby="v-pills-Supervisor-Details-tab">
+            <h2 class="head">Supervisor Details</h2>
+          </div>
+          <!--  -->
+
+          <div class="tab-pane fade" id="v-pills-Elite-Alumni" role="tabpanel" aria-labelledby="v-pills-Elite-Alumni-tab">
+            <h2 class="head">Elite Alumni</h2>
+          </div>
+          <div class="tab-pane fade" id="v-pills-Testimonial" role="tabpanel" aria-labelledby="v-pills-Testimonial-tab">
+            <h2 class="head">Testimonial</h2>
+            
+            
+            
+            
+            
+            
+            <div class="row mt-5">
+                  <div class="col-lg-6">
+                    <div class="lab">
+                      <img
+                        src="/assets/images/page-images/img1.jpg"
+                        alt=""
+                        class="lab-img"
+                        data-index="0"
+                      />
+                    </div>
+                    <h3>Mech-Cad Cam Lab</h3>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="lab">
+                      <img
+                        src="/assets/images/page-images/img2.jpg"
+                        alt=""
+                        class="lab-img"
+                        data-index="1"
+                      />
+                    </div>
+                    <h3>Mech-Fluid Mechanics Lab</h3>
+                  </div>
+                 
+                  </div>
+                 
+           <div id="lightbox" class="lightbox">
+              <span class="close">&times;</span>
+              <img class="lightbox-content" id="lightbox-img" />
+              <a class="prev">&#10094;</a>
+              <a class="next">&#10095;</a>
+            </div>
+
+            <script>
+              document.addEventListener("DOMContentLoaded", function () {
+                const images = document.querySelectorAll(".lab-img");
+                const lightbox = document.getElementById("lightbox");
+                const lightboxImg = document.getElementById("lightbox-img");
+                const closeBtn = document.querySelector(".close");
+                const prevBtn = document.querySelector(".prev");
+                const nextBtn = document.querySelector(".next");
+
+                let currentIndex = 0;
+
+                images.forEach((img, index) => {
+                  img.addEventListener("click", function () {
+                    currentIndex = index;
+                    showLightbox(img.src);
+                  });
+                });
+
+                closeBtn.addEventListener("click", function () {
+                  lightbox.style.display = "none";
+                });
+
+                prevBtn.addEventListener("click", function () {
+                  currentIndex =
+                    currentIndex > 0 ? currentIndex - 1 : images.length - 1;
+                  updateLightboxImage();
+                });
+
+                nextBtn.addEventListener("click", function () {
+                  currentIndex =
+                    currentIndex < images.length - 1 ? currentIndex + 1 : 0;
+                  updateLightboxImage();
+                });
+
+                function showLightbox(src) {
+                  lightboxImg.src = src;
+                  lightbox.style.display = "block";
+                }
+
+                function updateLightboxImage() {
+                  lightboxImg.src = images[currentIndex].src;
+                }
+              });
+            </script>
+            
+            
+          </div>
+          <div class="tab-pane fade" id="v-pills-Video" role="tabpanel" aria-labelledby="v-pills-Video-tab">
+            <h2 class="head">Video</h2>
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/eeQbePxSQqg?si=UxASOIq_ctCYMFt3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            
+            
+          </div>
+          <!--  -->
+
+          <div class="tab-pane fade" id="v-pills-Teaching-and-Learning-Process" role="tabpanel" aria-labelledby="v-pills-Teaching-and-Learning-Process-tab">
+            <h2 class="head">Teaching and Learning Process</h2>
+          </div>
+          <div class="tab-pane fade" id="v-pills-CO-PO" role="tabpanel" aria-labelledby="v-pills-CO-PO-tab">
+            <h2 class="head">CO-PO</h2>
+          </div>
+          <div class="tab-pane fade" id="v-pills-PSO" role="tabpanel" aria-labelledby="v-pills-PSO-tab">
+            <h2 class="head">PSO</h2>
+          </div>
+          <!--  -->
+
+          <div class="tab-pane fade" id="v-pills-Feedback" role="tabpanel" aria-labelledby="v-pills-Feedback-tab">
+            <h2 class="head">Feedback</h2>
+          </div>
+
+
+
+
+
+          
+
+
+
+
+        
+          <div class="tab-pane fade" id="v-pills-lab" role="tabpanel" aria-labelledby="v-pills-lab-tab">
+            <div class="lab">
+              <h2 class="head">Laboratory</h2>
+              <h3>ARTIFICIAL INTELLIGENCE AND DATA SCIENCE LAB 1</h3>
+              <p>Computational Intelligence Lab</p>
+            </div>
+            <table>
+              <tr>
+                <th style="
+                      background-color: rgba(255, 0, 0, 0.825);
+                      color: #fff;
+                    ">
+                  Computer with Configuration
+                </th>
+                <th style="
+                      background-color: rgba(255, 0, 0, 0.825);
+                      color: #fff;
+                    ">
+                  Quantity
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  <h2>Server</h2>
+                  <p>
+                    HP Server (HPE 360 Gen10 1U NC 8 SFF Server) - 16 GB RAM, 2 TB – SSD
+                  </p>
+                </td>
+                <td class="td">01</td>
+              </tr>
+              <tr>
+                <td>
+                  <h2>NODES</h2>
+                  <p>HP ProDesk - Intel Core i5, 16GB DDR, 512GB - SSD, 4GB - AMD 550X, Wi-Fi, Bluetooth</p>
+                  <p>Dell OptiPlex 3090 - Intel Core i5, 16GB DDR, 512GB - SSD, 4GB – RX 640, Wi-Fi, Bluetooth</p>
+                </td>
+                <td class="td">28</td>
+               
+               
+              </tr>
+              <tr>
+                <td>
+                  <h2>20 KVA UPS</h2>
+                </td>
+                <td class="td">01</td>
+              </tr>
+              <tr>
+                <td>
+                  <h2>10 KVA UPS</h2>
+                </td>
+                <td class="td">01</td>
+              </tr>
+            </table>
+
+           
+
+            <div class="lab mt-5">
+              <h3>ARTIFICIAL INTELLIGENCE AND DATA SCIENCE LAB 2</h3>
+              <p>
+                Quantum Enhanced Data Exploration Lab
+              </p>
+            </div>
+            <table>
+              <tr>
+                <th style="
+                      background-color: rgba(255, 0, 0, 0.825);
+                      color: #fff;
+                    ">
+                  Computer with Configuration
+                </th>
+                <th style="
+                      background-color: rgba(255, 0, 0, 0.825);
+                      color: #fff;
+                    ">
+                  Quantity
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  <h2>Server</h2>
+                  <p>
+                    HP Pro Desk 400 G9 - Intel Core i5, 16GB DDR, 512GB - SSD, 4GB - NECC NVDIA, Wi-Fi, Bluetooth <br />
+
+                  </p>
+                </td>
+                <td class="td">01</td>
+              </tr>
+              <!-- <tr>
+                  <td>
+                    <h2>NODES</h2>
+                    <p>
+                      HP PRO 3330 MTPC Intel Core i3-2120 Processor (3M
+                      cache,3.30Ghz)4GB Ram,500GB HDD
+                    </p>
+                  </td>
+                  <td class="td">51</td>
+                </tr> -->
+              <tr>
+                <td>
+                  <h2>10 KVA UPS</h2>
+                </td>
+                <td class="td">01</td>
+              </tr>
+            </table>
+            <div class="lab mt-5">
+              <h3>ARTIFICIAL INTELLIGENCE AND DATA SCIENCE LAB 3</h3>
+              <p>
+                Next Generation Lab
+              </p>
+            </div>
+            <table>
+              <tr>
+                <th style="
+                      background-color: rgba(255, 0, 0, 0.825);
+                      color: #fff;
+                    ">
+                  Computer with Configuration
+                </th>
+                <th style="
+                      background-color: rgba(255, 0, 0, 0.825);
+                      color: #fff;
+                    ">
+                  Quantity
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  <h2>Server</h2>
+                  <p>
+                    HP Pro Desk 400 G9 - Intel Core i5, 16GB DDR, 512GB - SSD, 4GB - NECC NVDIA, Wi-Fi, Bluetooth <br />
+
+                  </p>
+                </td>
+                <td class="td">01</td>
+              </tr>
+              
+              <tr>
+                <td>
+                  <h2>10 KVA UPS</h2>
+                </td>
+                <td class="td">01</td>
+              </tr>
+            </table>
+            <div class="lab mt-5">
+              <h3>ARTIFICIAL INTELLIGENCE AND DATA SCIENCE LAB 4</h3>
+              <p>
+                R & D Lab
+              </p>
+            </div>
+            <table>
+              <tr>
+                <th style="
+                      background-color: rgba(255, 0, 0, 0.825);
+                      color: #fff;
+                    ">
+                  Computer with Configuration
+                </th>
+                <th style="
+                      background-color: rgba(255, 0, 0, 0.825);
+                      color: #fff;
+                    ">
+                  Quantity
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  <h2>Server</h2>
+                  <p>
+                    HP Pro Desk 400 G9 - Intel Core i5, 16GB DDR, 512GB - SSD, 4GB - NECC NVDIA, Wi-Fi, Bluetooth <br />
+
+                  </p>
+                </td>
+                <td class="td">01</td>
+              </tr>
+              
+              <tr>
+                <td>
+                  <h2>10 KVA UPS</h2>
+                </td>
+                <td class="td">01</td>
+              </tr>
+            </table>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- sub footer -->
+  <section class="sub-footer">
+    <div class="container sub-footer-con">
+      <div class="logo1">
+        <img src="/assets/images/st-logo1.png" alt="" />
+        <a style="text-decoration: none" href="https://www.stjosephsgarden.com/">
+          <p>St.Joseph's Garden School</p>
+        </a>
+      </div>
+      <div class="line">
+        <img src="/assets/images/line.png" alt="" />
+      </div>
+      <div class="logo2">
+        <img src="/assets/images/st-logo2.png" alt="" />
+        <a style="text-decoration: none" href="https://stjosephstechnology.ac.in/home/">
+          <p>St. Joseph's Institute of Technology</p>
+        </a>
+      </div>
+    </div>
+    <div class="location">
+      <i class="fa-solid fa-location-dot"></i>
+      <a style="text-decoration: none"
+        href="https://www.google.com/maps/place/St.Joseph's+Institute+of+Technology/@12.9777684,80.1488643,12z/data=!4m10!1m2!2m1!1sst.joseph+college+chennai!3m6!1s0x3a525bbb618d3ea9:0x90b3767be093efaa!8m2!3d12.8698794!4d80.2184296!15sChlzdC5qb3NlcGggY29sbGVnZSBjaGVubmFpkgEHY29sbGVnZeABAA!16s%2Fm%2F0cr5_zr?entry=ttu">
+        <p>OMR, Chennai - 600119</p>
+      </a>
+    </div>
+  </section>
+
+  <!--  -->
+  <!-- footer -->
+  <div id="footer-container"></div>
+
+  <script>
+    // Function to fetch and insert the footer
+    function includeFooter() {
+      var xhr = new XMLHttpRequest();
+      var footerUrl = "/includes/footer.html";
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          document.getElementById("footer-container").innerHTML =
+            xhr.responseText;
+        } else {
+          console.error("Failed to load footer: " + xhr.status);
+        }
+      };
+      xhr.open("GET", footerUrl, true);
+      xhr.send();
+    }
+
+    // Call the functions to include header and footer
+    includeHeader();
+    includeFooter();
+  </script>
+</body>
+<!-- JavaScript -->
+<script src="script.js"></script>
+<!-- bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script src="/assets/js/script.js"></script>
+<!-- JS here -->
+<script src="/assets/js/jquery-3.6.0.min.js"></script>
+<script src="/assets/js/meanmenu.min.js"></script>
+<script src="/assets/js/main.js"></script>
+
+<!--  -->
+
+</html>
