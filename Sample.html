@@ -108,6 +108,7 @@
       }
     }
   </style>
+  
   <!-- Offcanvas area start -->
   <div class="fix">
     <div class="offcanvas__info">
@@ -157,6 +158,59 @@
 
   <!-- Header area start -->
   <script>
+    // Function to toggle subnav for Research
+function toggleSubnav2(element) {
+  var subnavElements = document.querySelectorAll('.subnav2');
+  
+  // Toggle visibility of subnav2 (Staff Publications and others under Research)
+  subnavElements.forEach(function(subnav) {
+    if (subnav.style.display === 'none') {
+      subnav.style.display = 'block';
+      element.classList.remove('fa-plus');
+      element.classList.add('fa-minus');
+    } else {
+      subnav.style.display = 'none';
+      element.classList.remove('fa-minus');
+      element.classList.add('fa-plus');
+    }
+  });
+}
+
+// Function to toggle sub-subnav for Staff Publications
+function toggleSubSubnav(element) {
+  var subSubnavElements = document.querySelectorAll('.subsubnav');
+  
+  // Toggle visibility of subsubnav (2023, 2022, 2024 under Staff Publications)
+  subSubnavElements.forEach(function(subsubnav) {
+    if (subsubnav.style.display === 'none') {
+      subsubnav.style.display = 'block';
+      element.classList.remove('fa-plus');
+      element.classList.add('fa-minus');
+    } else {
+      subsubnav.style.display = 'none';
+      element.classList.remove('fa-minus');
+      element.classList.add('fa-plus');
+    }
+  });
+}
+function toggleSubnavSyllabus(icon) {
+  // Toggle the visibility of the subnav for syllabus
+  const subnavItems = document.querySelectorAll('.subnav-syllabus');
+  
+  subnavItems.forEach(item => {
+    if (item.style.display === 'none') {
+      item.style.display = 'block';
+      icon.classList.remove('fa-plus');
+      icon.classList.add('fa-minus');
+    } else {
+      item.style.display = 'none';
+      icon.classList.remove('fa-minus');
+      icon.classList.add('fa-plus');
+    }
+  });
+}
+
+
     // Function to fetch and insert the header
     function includeHeader() {
       // Create a new XMLHttpRequest object
@@ -182,6 +236,7 @@
 
     // Call the function to include the header
     includeHeader();
+
   </script>
 
   <div class="preloader">
@@ -292,16 +347,47 @@
             </button>
             <!--  -->
             <!-- subbutton -->
-            <button onclick="scrollToTop()" class="nav-link subnav6" style="display: none" id="v-pills-Syllabus-tab"
-              data-bs-toggle="pill" data-bs-target="#v-pills-Syllabus" type="button" role="tab"
-              aria-controls="v-pills-Syllabus" aria-selected="true">
-              Syllabus
-            </button>
-            <button onclick="scrollToTop()" class="nav-link subnav6" style="display: none" id="v-pills-Regulations-tab"
-              data-bs-toggle="pill" data-bs-target="#v-pills-Regulations" type="button" role="tab"
-              aria-controls="v-pills-Regulations" aria-selected="true">
-              Regulations
-            </button>
+           <!-- Syllabus button with + icon -->
+<button onclick="scrollToTop()" class="nav-link subnav6" style="display: none" id="v-pills-Syllabus-tab"
+data-bs-toggle="pill" data-bs-target="#v-pills-Syllabus" type="button" role="tab" aria-controls="v-pills-Syllabus"
+aria-selected="true">
+Syllabus
+<div class="right-arrow" id="arrow-icon-syllabus">
+  <i onclick="toggleSubnavSyllabus(this)" class="fa-solid fa-plus"></i>
+</div>
+</button>
+
+<!-- Submenu for Syllabus with years -->
+<button class="nav-link subnav-syllabus" style="display: none" onclick="scrollToTop()" data-bs-toggle="pill"
+data-bs-target="#v-pills-2021-Syllabus" type="button" role="tab" aria-controls="v-pills-2021-Syllabus"
+aria-selected="false">
+<a href="Syllabus/R2021 year 2021 admitted.pdf">Syllabus 2021</a>
+
+</button>
+<button class="nav-link subnav-syllabus" style="display: none" onclick="scrollToTop()" data-bs-toggle="pill"
+data-bs-target="#v-pills-2022-Syllabus" type="button" role="tab" aria-controls="v-pills-2022-Syllabus"
+aria-selected="false">
+<a href="Syllabus/R2021 year 2022  admitted.pdf">Syllabus 2022</a>
+</button>
+<button class="nav-link subnav-syllabus" style="display: none" onclick="scrollToTop()" data-bs-toggle="pill"
+data-bs-target="#v-pills-2023-Syllabus" type="button" role="tab" aria-controls="v-pills-2023-Syllabus"
+aria-selected="false">
+<a href="Syllabus/R2021 year 2023 admitted.pdf">Syllabus 2023</a>
+</button>
+<button class="nav-link subnav-syllabus" style="display: none" onclick="scrollToTop()" data-bs-toggle="pill"
+data-bs-target="#v-pills-2024-Syllabus" type="button" role="tab" aria-controls="v-pills-2024-Syllabus"
+aria-selected="false">
+<a href="Syllabus/R2021 year 2024 admitted.pdf">Syllabus 2024</a>
+</button>
+
+<!-- Regulations button -->
+<button onclick="scrollToTop()" class="nav-link subnav6" style="display: none" id="v-pills-Regulations-tab"
+data-bs-toggle="pill" data-bs-target="#v-pills-Regulations" type="button" role="tab"
+aria-controls="v-pills-Regulations" aria-selected="true">
+Regulations
+</button>
+
+            
 
             <button onclick="scrollToTop()" class="nav-link" id="v-pills-Newsletter-tab" data-bs-toggle="pill"
               data-bs-target="#v-pills-Newsletter" type="button" role="tab" aria-controls="v-pills-Newsletter"
@@ -312,67 +398,93 @@
               data-bs-target="#v-pills-lab" type="button" role="tab" aria-controls="v-pills-lab" aria-selected="true">
               Lab
             </button>
-            <!-- orginal -->
-            <button class="nav-link" id="v-pills-Research-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Research"
-              type="button" role="tab" aria-controls="v-pills-Research" aria-selected="true">
-              Research
-              <div id="arrow-icon2" class="right-arrow">
-                <i onclick="toggleSubnav2(this)" class="fa-solid fa-plus"></i>
-              </div>
-            </button>
-            <!--  -->
-            <!-- subnav -->
-            <button onclick="scrollToTop()" class="nav-link subnav2" style="display: none"
-              id="v-pills-Staff-Patents-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Staff-Patents" type="button"
-              role="tab" aria-controls="v-pills-Staff-Patents" aria-selected="true">
-              Staff Patents
-            </button>
-            <button onclick="scrollToTop()" class="nav-link subnav2" style="display: none"
-              id="v-pills-Students-Patents-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Students-Patents"
-              type="button" role="tab" aria-controls="v-pills-Students-Patents" aria-selected="true">
-              Students Patents
-            </button>
-            <button onclick="scrollToTop()" class="nav-link subnav2" style="display: none"
-              id="v-pills-Staff-Publications-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Staff-Publications"
-              type="button" role="tab" aria-controls="v-pills-Staff-Publications" aria-selected="true">
-              Staff Publications
-            </button>
-            <button onclick="scrollToTop()" class="nav-link subnav2" style="display: none"
-              id="v-pills-Students-Publications-tab" data-bs-toggle="pill"
-              data-bs-target="#v-pills-Students-Publications" type="button" role="tab"
-              aria-controls="v-pills-Students-Publications" aria-selected="true">
-              Students Publications
-            </button>
-            <button onclick="scrollToTop()" class="nav-link subnav2" style="display: none"
-              id="v-pills-Funded-Projects-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Funded-Projects"
-              type="button" role="tab" aria-controls="v-pills-Funded-Projects" aria-selected="true">
-              Funded Projects
-            </button>
-            <button onclick="scrollToTop()" class="nav-link subnav2" style="display: none" id="v-pills-Mou-tab"
-              data-bs-toggle="pill" data-bs-target="#v-pills-Mou" type="button" role="tab" aria-controls="v-pills-Mou"
-              aria-selected="true">
-              Mou
-            </button>
-            <button onclick="scrollToTop()" class="nav-link subnav2" style="display: none"
-              id="v-pills-Supervisor-Details-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Supervisor-Details"
-              type="button" role="tab" aria-controls="v-pills-Supervisor-Details" aria-selected="true">
-              Supervisor Details
-            </button>
+            
+           
+
+<button class="nav-link" id="v-pills-Research-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Research" 
+        type="button" role="tab" aria-controls="v-pills-Research" aria-selected="true">
+    Research
+    <div id="arrow-icon2" class="right-arrow">
+        <i onclick="toggleSubnav2(this)" class="fa-solid fa-plus"></i>
+    </div>
+</button>
+
+<!-- Subnav for Research -->
+<button onclick="scrollToTop()" class="nav-link subnav2" style="display: none" id="v-pills-Staff-Publications-tab" 
+        data-bs-toggle="pill" data-bs-target="#v-pills-Staff-Publications" type="button" role="tab" 
+        aria-controls="v-pills-Staff-Publications" aria-selected="true">
+        Staff Patents
+</button>
+<button onclick="scrollToTop()" class="nav-link subnav2" style="display: none" id="v-pills-Staff-Publications-tab" 
+        data-bs-toggle="pill" data-bs-target="#v-pills-Staff-Publications" type="button" role="tab" 
+        aria-controls="v-pills-Staff-Publications" aria-selected="true">
+        Students Patents
+</button>
+<button onclick="scrollToTop()" class="nav-link subnav2" style="display: none" id="v-pills-Staff-Publications-tab" 
+        data-bs-toggle="pill" data-bs-target="#v-pills-Staff-Publications" type="button" role="tab" 
+        aria-controls="v-pills-Staff-Publications" aria-selected="true">
+       Staff Publications
+    <div id="arrow-icon-sub-sub" class="right-arrow">
+        <i onclick="toggleSubSubnav(this)" class="fa-solid fa-plus"></i>
+    </div>
+</button>
+<!---sub -sub nav-->
+<button onclick="scrollToTop()" class="nav-link subsubnav" style="display: none" id="v-pills-2023-tab" 
+        data-bs-toggle="pill" data-bs-target="#v-pills-2023" type="button" role="tab" aria-controls="v-pills-2023" 
+        aria-selected="true">
+        <a href="Staff Publication/Calendar year -2021 staff publication.pdf">Staff Publications 2021</a>
+        
+</button>
+<button onclick="scrollToTop()" class="nav-link subsubnav" style="display: none" id="v-pills-2022-tab" 
+        data-bs-toggle="pill" data-bs-target="#v-pills-2022" type="button" role="tab" aria-controls="v-pills-2022" 
+        aria-selected="true">
+        <a href="Staff Publication/Calendar year-2022 staff publications.pdf">Staff Publications 2022</a>
+</button>
+<button onclick="scrollToTop()" class="nav-link subsubnav" style="display: none" id="v-pills-2024-tab" 
+        data-bs-toggle="pill" data-bs-target="#v-pills-2024" type="button" role="tab" aria-controls="v-pills-2024" 
+        aria-selected="true">
+        <a href="Staff Publication/Calendar year-2023 staff publications.pdf">Staff Publications 2023</a>
+</button>
+<button onclick="scrollToTop()" class="nav-link subnav2" style="display: none" id="v-pills-Staff-Publications-tab" 
+        data-bs-toggle="pill" data-bs-target="#v-pills-Staff-Publications" type="button" role="tab" 
+        aria-controls="v-pills-Staff-Publications" aria-selected="true">
+        Students Publications  
+</button>
+<button onclick="scrollToTop()" class="nav-link subnav2" style="display: none" id="v-pills-Staff-Publications-tab" 
+        data-bs-toggle="pill" data-bs-target="#v-pills-Staff-Publications" type="button" role="tab" 
+        aria-controls="v-pills-Staff-Publications" aria-selected="true">
+        Funded Projects
+</button>
+<button onclick="scrollToTop()" class="nav-link subnav2" style="display: none" id="v-pills-Staff-Publications-tab" 
+        data-bs-toggle="pill" data-bs-target="#v-pills-Staff-Publications" type="button" role="tab" 
+        aria-controls="v-pills-Staff-Publications" aria-selected="true">
+        Mou
+</button>
+<button onclick="scrollToTop()" class="nav-link subnav2" style="display: none" id="v-pills-Staff-Publications-tab" 
+        data-bs-toggle="pill" data-bs-target="#v-pills-Staff-Publications" type="button" role="tab" 
+        aria-controls="v-pills-Staff-Publications" aria-selected="true">
+        Supervisor Details
+</button>
+
+
+
 
             <!--  -->
 
             <!-- orginal -->
            <button class="nav-link" id="v-pills-Elite-Alumni-tab" data-bs-toggle="pill"
               data-bs-target="#v-pills-Elite-Alumni" type="button" role="tab" aria-controls="v-pills-Elite-Alumni"
-              aria-selected="true">
-              Elite Alumni
-              <div id="arrow-icon3" class="right-arrow">
+              aria-selected="true" >
+              <a class="nav-link" href="Elite Alumini/elite alumni details for website.pdf" style="text-decoration: none;">
+                Elite Alumni</a>
+              
+              <!-- <div id="arrow-icon3" class="right-arrow">
                 <i onclick="toggleSubnav3(this)" class="fa-solid fa-plus"></i>
-              </div>
+              </div> -->
             </button>
             <!--  -->
-            <!-- subnav -->
-            <button onclick="scrollToTop()" class="nav-link subnav3" style="display: none" id="v-pills-Testimonial-tab"
+          <!-- subnav -->
+           <!--  <button onclick="scrollToTop()" class="nav-link subnav3" style="display: none" id="v-pills-Testimonial-tab"
               data-bs-toggle="pill" data-bs-target="#v-pills-Testimonial" type="button" role="tab"
               aria-controls="v-pills-Testimonial" aria-selected="true">
               Testimonial
@@ -381,7 +493,7 @@
               data-bs-toggle="pill" data-bs-target="#v-pills-Video" type="button" role="tab"
               aria-controls="v-pills-Video" aria-selected="true">
               Video
-            </button>
+            </button> -->
             <!--  -->
 
             <!-- orginal -->
@@ -662,7 +774,7 @@
                     <div class="content">
                       <div class="back">
                         <div class="back-content">
-                          <img src="./staff/3.jpg" alt="" />
+                          <img src="./staff/3.JPG" alt="" />
                           <div class="faculty">
                             <h3>Dr. S Aghalya</h3>
                             <p>Professor</p>
@@ -689,7 +801,7 @@
                           <!-- Basic Information -->
                           <div class="row mb-4">
                             <div class="col-md-4 text-center">
-                              <img src="./staff/3.jpg" alt="Dr. S. Aghalya" class="img-thumbnail" />
+                              <img src="./staff/3.JPG" alt="Dr. S. Aghalya" class="img-thumbnail" />
                             </div>
                             <div class="col-md-8">
                               <h3>Dr. S. Aghalya</h3>
@@ -1545,7 +1657,7 @@
                     <div class="content">
                       <div class="back">
                         <div class="back-content">
-                          <img src="./staff/10.jpg" alt="" />
+                          <img src="./staff/10.JPG" alt="" />
                           <div class="faculty">
                             <h3>Dr.R.Niruban</h3>
                             <p>Associate Professor</p>
@@ -1571,7 +1683,7 @@
                           <!-- Basic Information -->
                           <div class="row mb-4">
                             <div class="col-md-4 text-center">
-                              <img src="./staff/10.jpg" alt="Dr. R. Niruban" class="img-thumbnail" />
+                              <img src="./staff/10.JPG" alt="Dr. R. Niruban" class="img-thumbnail" />
                             </div>
                             <div class="col-md-8">
                               <h3>Dr. R. Niruban</h3>
@@ -1761,7 +1873,7 @@
                     <div class="content">
                       <div class="back">
                         <div class="back-content">
-                          <img src="./staff/12.jpg" alt="" />
+                          <img src="./staff/12.JPG" alt="" />
                           <div class="faculty">
                             <h3>Dr. S.Vinayagapriya</h3>
                             <p>Associate Professor</p>
@@ -1789,7 +1901,7 @@
           <!-- Basic Information -->
           <div class="row mb-4">
             <div class="col-md-4 text-center">
-              <img src="./staff/12.jpg" alt="Dr. S. Vinayagapriya" class="img-thumbnail" />
+              <img src="./staff/12.JPG" alt="Dr. S. Vinayagapriya" class="img-thumbnail" />
             </div>
             <div class="col-md-8">
               <h3>Dr. S. Vinayagapriya</h3>
@@ -2259,7 +2371,7 @@
                     <div class="content">
                       <div class="back">
                         <div class="back-content">
-                          <img src="./staff/16.jpg" alt="" />
+                          <img src="./staff/16.JPG" alt="" />
                           <div class="faculty">
                             <h3>Dr.K.Ramachandra Reddy</h3>
                             <p>Assistant Professor</p>
@@ -2285,7 +2397,7 @@
                           <!-- Basic Information -->
                           <div class="row mb-4">
                             <div class="col-md-4 text-center">
-                              <img src="./staff/16.jpg" alt="Dr. K. Ramachandra Reddy" class="img-thumbnail" />
+                              <img src="./staff/16.JPG" alt="Dr. K. Ramachandra Reddy" class="img-thumbnail" />
                             </div>
                             <div class="col-md-8">
                               <h3>Dr. K. Ramachandra Reddy</h3>
@@ -2378,7 +2490,7 @@
                     <div class="content">
                       <div class="back">
                         <div class="back-content">
-                          <img src="./staff/17.jpg" alt="" />
+                          <img src="./staff/17.JPG" alt="" />
                           <div class="faculty">
                             <h3>Mrs. G.Anitha</h3>
                             <p>Assistant Professor</p>
@@ -2402,7 +2514,7 @@
                         <div class="container-fluid">
                           <div class="row mb-4">
                             <div class="col-md-4 text-center">
-                              <img src="./staff/17.jpg" alt="G. Anitha" class="img-thumbnail" />
+                              <img src="./staff/17.JPG" alt="G. Anitha" class="img-thumbnail" />
                             </div>
                             <div class="col-md-8">
                               <h3>G. Anitha</h3>
@@ -2563,7 +2675,7 @@
                     <div class="content">
                       <div class="back">
                         <div class="back-content">
-                          <img src="./staff/19.jpg" alt="" />
+                          <img src="./staff/19.JPG" alt="" />
                           <div class="faculty">
                             <h3>Mrs. P.Elaveni</h3>
                             <p>Assistant Professor</p>
@@ -2589,7 +2701,7 @@
                           <!-- Basic Information -->
                           <div class="row mb-4">
                             <div class="col-md-4 text-center">
-                              <img src="./staff/19.jpg" alt="P. Elaveni" class="img-thumbnail" />
+                              <img src="./staff/19.JPG" alt="P. Elaveni" class="img-thumbnail" />
                             </div>
                             <div class="col-md-8">
                               <h3>P. Elaveni</h3>
@@ -2676,7 +2788,7 @@
                     <div class="content">
                       <div class="back">
                         <div class="back-content">
-                          <img src="./staff/20.jpg" alt="" />
+                          <img src="./staff/20.JPG" alt="" />
                           <div class="faculty">
                             <h3>Mrs. S.Devipriya</h3>
                             <p>Assistant Professor</p>
@@ -2702,7 +2814,7 @@
                           <!-- Basic Information -->
                           <div class="row mb-4">
                             <div class="col-md-4 text-center">
-                              <img src="./staff/20.jpg" alt="S. Devipriya" class="img-thumbnail" />
+                              <img src="./staff/20.JPG" alt="S. Devipriya" class="img-thumbnail" />
                             </div>
                             <div class="col-md-8">
                               <h3>S. Devipriya</h3>
@@ -2781,7 +2893,7 @@
                     <div class="content">
                       <div class="back">
                         <div class="back-content">
-                          <img src="./staff/21.jpg" alt="" />
+                          <img src="./staff/21.JPG" alt="" />
                           <div class="faculty">
                             <h3>Mrs. K. Jasmine Mystica</h3>
                             <p>Assistant Professor</p>
@@ -2807,7 +2919,7 @@
                           <!-- Basic Information -->
                           <div class="row mb-4">
                             <div class="col-md-4 text-center">
-                              <img src="./staff/21.jpg" alt="K. Jasmine Mystica" class="img-thumbnail" />
+                              <img src="./staff/21.JPG" alt="K. Jasmine Mystica" class="img-thumbnail" />
                             </div>
                             <div class="col-md-8">
                               <h3>K. Jasmine Mystica</h3>
@@ -2879,7 +2991,7 @@
                     <div class="content">
                       <div class="back">
                         <div class="back-content">
-                          <img src="./staff/22.jpg" alt="" />
+                          <img src="./staff/22.JPG" alt="" />
                           <div class="faculty">
                             <h3>Mrs. K. R. Kayalvizhi</h3>
                             <p>Assistant Professor</p>
@@ -2905,7 +3017,7 @@
                           <!-- Basic Information -->
                           <div class="row mb-4">
                             <div class="col-md-4 text-center">
-                              <img src="./staff/22.jpg" alt="K. R. Kayalvizhi" class="img-thumbnail" />
+                              <img src="./staff/22.JPG" alt="K. R. Kayalvizhi" class="img-thumbnail" />
                             </div>
                             <div class="col-md-8">
                               <h3>K. R. Kayalvizhi</h3>
@@ -4086,9 +4198,9 @@ So far, the Department has successfully conducted 4 National Conferences, 19 Tec
           </div>
           <!--  -->
 
-          <div class="tab-pane fade" id="v-pills-Elite-Alumni" role="tabpanel" aria-labelledby="v-pills-Elite-Alumni-tab">
-            <h2 class="head">Elite Alumni</h2>
-          </div>
+          <!-- <div class="tab-pane fade" href="Elite Alumini/elite alumni details for website.pdf" id="v-pills-Elite-Alumni" role="tabpanel" aria-labelledby="v-pills-Elite-Alumni-tab">
+           
+          </div> -->
           <div class="tab-pane fade" id="v-pills-Testimonial" role="tabpanel" aria-labelledby="v-pills-Testimonial-tab">
             <h2 class="head">Testimonial</h2>
             
@@ -4212,187 +4324,110 @@ So far, the Department has successfully conducted 4 National Conferences, 19 Tec
 
         
           <div class="tab-pane fade" id="v-pills-lab" role="tabpanel" aria-labelledby="v-pills-lab-tab">
-            <div class="lab">
-              <h2 class="head">Laboratory</h2>
-              <h3>ARTIFICIAL INTELLIGENCE AND DATA SCIENCE LAB 1</h3>
-              <p>Computational Intelligence Lab</p>
-            </div>
-            <table>
-              <tr>
-                <th style="
-                      background-color: rgba(255, 0, 0, 0.825);
-                      color: #fff;
-                    ">
-                  Computer with Configuration
-                </th>
-                <th style="
-                      background-color: rgba(255, 0, 0, 0.825);
-                      color: #fff;
-                    ">
-                  Quantity
-                </th>
-              </tr>
-              <tr>
-                <td>
-                  <h2>Server</h2>
-                  <p>
-                    HP Server (HPE 360 Gen10 1U NC 8 SFF Server) - 16 GB RAM, 2 TB – SSD
-                  </p>
-                </td>
-                <td class="td">01</td>
-              </tr>
-              <tr>
-                <td>
-                  <h2>NODES</h2>
-                  <p>HP ProDesk - Intel Core i5, 16GB DDR, 512GB - SSD, 4GB - AMD 550X, Wi-Fi, Bluetooth</p>
-                  <p>Dell OptiPlex 3090 - Intel Core i5, 16GB DDR, 512GB - SSD, 4GB – RX 640, Wi-Fi, Bluetooth</p>
-                </td>
-                <td class="td">28</td>
+            
+            <div class="container">
+              <div class="lab mt-5">
+                <h2 class="head">Laboratory</h2>
+              </div>
+              
+            
+              <!-- Lab Section 1 -->
+              <div class="container">
+                <!-- Lab Section 1 -->
+                <div class="row service-sections">
+                  <div class="col-sm-6 col-md-3 service-section text-center mb-4">
+                    <img src="lab/EPL.jpg" alt="Engineering Practices & Devices Lab" class="img-fluid" style="max-width: 250px; height: auto;">
+                    <h4 class="mt-3">ENGINEERING PRACTICES & DEVICES LAB</h4>
+                    <a href="Labcontent/1 EPL & DEVICES LAB.pdf" class="read-more-link">Read More</a>
+                  </div>
+              
+                  <div class="col-sm-6 col-md-3 service-section text-center mb-4">
+                    <img src="lab/ADC.jpg" alt="Analog & Digital Circuits Lab" class="img-fluid" style="max-width: 250px; height: auto;">
+                    <h4 class="mt-3">ANALOG & DIGITAL CIRCUITS LAB</h4>
+                    <a href="Labcontent/2 ANALOG & DIGITAL CIRCUITS LAB (1).pdf" class="read-more-link">Read More</a>
+                  </div>
+              
+                  <div class="col-sm-6 col-md-3 service-section text-center mb-4">
+                    <img src="lab/MPMC.jpg" alt="Microprocessor & Microcontroller Lab" class="img-fluid" style="max-width: 250px; height: auto;">
+                    <h4 class="mt-3">MICROPROCESSOR & MICROCONTROLLER LAB</h4>
+                    <a href="Labcontent/7 MICROPROCESSOR & MICROCONTROLLER LAB.pdf" class="read-more-link">Read More</a>
+                  </div>
+              
+                  <div class="col-sm-6 col-md-3 service-section text-center mb-4">
+                    <img src="lab/DSP.jpg" alt="Digital Signal Processing Lab" class="img-fluid" style="max-width: 250px; height: auto;">
+                    <h4 class="mt-3">DIGITAL SIGNAL PROCESSING LAB</h4>
+                    <a href="Labcontent/4 DIGITAL SIGNAL PROCESSING LAB.pdf" class="read-more-link">Read More</a>
+                  </div>
+                </div>
+              
+                <!-- Lab Section 2 -->
+                <div class="row service-sections">
+                  <div class="col-sm-6 col-md-3 service-section text-center mb-4">
+                    <img src="lab/CN.jpg" alt="Communication Network Lab" class="img-fluid" style="max-width: 250px; height: auto;">
+                    <h4 class="mt-3">COMMUNICATION NETWORK LAB</h4>
+                    <a href="Labcontent/6 COMMUNICATION NETWORK LAB.pdf" class="read-more-link">Read More</a>
+                  </div>
+              
+                  <div class="col-sm-6 col-md-3 service-section text-center mb-4">
+                    <img src="lab/CS.jpg" alt="Communication Systems Lab" class="img-fluid" style="max-width: 250px; height: auto;">
+                    <h4 class="mt-3">COMMUNICATION SYSTEMS LAB</h4>
+                    <a href="Labcontent/5 COMMUNICATION SYSTEMS LAB.pdf" class="read-more-link">Read More</a>
+                  </div>
+              
+                  <div class="col-sm-6 col-md-3 service-section text-center mb-4">
+                    <img src="lab/vlsi.jpg" alt="VLSI Design Lab" class="img-fluid" style="max-width: 250px; height: auto;">
+                    <h4 class="mt-3">VLSI DESIGN LAB</h4>
+                    <a href="Labcontent/8 VLSI DESIGN LAB.pdf" class="read-more-link">Read More</a>
+                  </div>
+              
+                  <div class="col-sm-6 col-md-3 service-section text-center mb-4">
+                    <img src="lab/ACL.jpg" alt="Advanced Communication Lab" class="img-fluid" style="max-width: 250px; height: auto;">
+                    <h4 class="mt-3">ADVANCED COMMUNICATION LAB</h4>
+                    <a href="Labcontent/9 ADVANCED COMMUNICATION LAB.pdf" class="read-more-link">Read More</a>
+                  </div>
+                </div>
+              
+                <!-- Lab Section 3 -->
+                <div class="row service-sections">
+                  <div class="col-sm-6 col-md-3 service-section text-center mb-4">
+                    <img src="lab/embeeded.jpg" alt="Embedded Lab" class="img-fluid" style="max-width: 250px; height: auto;">
+                    <h4 class="mt-3">EMBEDDED LAB</h4>
+                    <a href="Labcontent/10 EMBEDDED LAB.pdf" class="read-more-link">Read More</a>
+                  </div>
+              
+                  <div class="col-sm-6 col-md-3 service-section text-center mb-4">
+                    <img src="lab/Ckt & LIC.jpg" alt="Circuit Design Simulation & LIC Lab" class="img-fluid" style="max-width: 250px; height: auto;">
+                    <h4 class="mt-3">CIRCUIT DESIGN SIMULATION & LIC LAB</h4>
+                    <a href="Labcontent/3 CIRCUIT DESIGN SIMULATION & LIC LAB.pdf" class="read-more-link">Read More</a>
+                  </div>
+              
+                  <div class="col-sm-6 col-md-3 service-section text-center mb-4">
+                    <img src="lab/11 CENTRE OF EXCELLENCE.jpg" alt="Centre of Excellence" class="img-fluid" style="max-width: 250px; height: auto;">
+                    <h4 class="mt-3">CENTRE OF EXCELLENCE</h4>
+                    <a href="Labcontent/11 CENTRE of EXCELLANCE.pdf" class="read-more-link">Read More</a>
+                  </div>
+              
+                  <div class="col-sm-6 col-md-3 service-section text-center mb-4">
+                    <img src="lab/12 RESEARCH & DEVELOPMENT CENTRE.jpg" alt="Research & Development" class="img-fluid" style="max-width: 250px; height: auto;">
+                    <h4 class="mt-3">RESEARCH & DEVELOPMENT CENTRE</h4>
+                    <a href="Labcontent/12 Facilities in -R and D.pdf" class="read-more-link">Read More</a>
+                  </div>
+                </div>
+              </div>
+              
                
-               
-              </tr>
-              <tr>
-                <td>
-                  <h2>20 KVA UPS</h2>
-                </td>
-                <td class="td">01</td>
-              </tr>
-              <tr>
-                <td>
-                  <h2>10 KVA UPS</h2>
-                </td>
-                <td class="td">01</td>
-              </tr>
-            </table>
+            
 
            
 
-            <div class="lab mt-5">
-              <h3>ARTIFICIAL INTELLIGENCE AND DATA SCIENCE LAB 2</h3>
-              <p>
-                Quantum Enhanced Data Exploration Lab
-              </p>
-            </div>
-            <table>
-              <tr>
-                <th style="
-                      background-color: rgba(255, 0, 0, 0.825);
-                      color: #fff;
-                    ">
-                  Computer with Configuration
-                </th>
-                <th style="
-                      background-color: rgba(255, 0, 0, 0.825);
-                      color: #fff;
-                    ">
-                  Quantity
-                </th>
-              </tr>
-              <tr>
-                <td>
-                  <h2>Server</h2>
-                  <p>
-                    HP Pro Desk 400 G9 - Intel Core i5, 16GB DDR, 512GB - SSD, 4GB - NECC NVDIA, Wi-Fi, Bluetooth <br />
-
-                  </p>
-                </td>
-                <td class="td">01</td>
-              </tr>
-              <!-- <tr>
-                  <td>
-                    <h2>NODES</h2>
-                    <p>
-                      HP PRO 3330 MTPC Intel Core i3-2120 Processor (3M
-                      cache,3.30Ghz)4GB Ram,500GB HDD
-                    </p>
-                  </td>
-                  <td class="td">51</td>
-                </tr> -->
-              <tr>
-                <td>
-                  <h2>10 KVA UPS</h2>
-                </td>
-                <td class="td">01</td>
-              </tr>
-            </table>
-            <div class="lab mt-5">
-              <h3>ARTIFICIAL INTELLIGENCE AND DATA SCIENCE LAB 3</h3>
-              <p>
-                Next Generation Lab
-              </p>
-            </div>
-            <table>
-              <tr>
-                <th style="
-                      background-color: rgba(255, 0, 0, 0.825);
-                      color: #fff;
-                    ">
-                  Computer with Configuration
-                </th>
-                <th style="
-                      background-color: rgba(255, 0, 0, 0.825);
-                      color: #fff;
-                    ">
-                  Quantity
-                </th>
-              </tr>
-              <tr>
-                <td>
-                  <h2>Server</h2>
-                  <p>
-                    HP Pro Desk 400 G9 - Intel Core i5, 16GB DDR, 512GB - SSD, 4GB - NECC NVDIA, Wi-Fi, Bluetooth <br />
-
-                  </p>
-                </td>
-                <td class="td">01</td>
-              </tr>
+           
               
-              <tr>
-                <td>
-                  <h2>10 KVA UPS</h2>
-                </td>
-                <td class="td">01</td>
-              </tr>
-            </table>
-            <div class="lab mt-5">
-              <h3>ARTIFICIAL INTELLIGENCE AND DATA SCIENCE LAB 4</h3>
-              <p>
-                R & D Lab
-              </p>
-            </div>
-            <table>
-              <tr>
-                <th style="
-                      background-color: rgba(255, 0, 0, 0.825);
-                      color: #fff;
-                    ">
-                  Computer with Configuration
-                </th>
-                <th style="
-                      background-color: rgba(255, 0, 0, 0.825);
-                      color: #fff;
-                    ">
-                  Quantity
-                </th>
-              </tr>
-              <tr>
-                <td>
-                  <h2>Server</h2>
-                  <p>
-                    HP Pro Desk 400 G9 - Intel Core i5, 16GB DDR, 512GB - SSD, 4GB - NECC NVDIA, Wi-Fi, Bluetooth <br />
-
-                  </p>
-                </td>
-                <td class="td">01</td>
-              </tr>
               
-              <tr>
-                <td>
-                  <h2>10 KVA UPS</h2>
-                </td>
-                <td class="td">01</td>
-              </tr>
-            </table>
+           
+              
+             
+         
+            
 
             
           </div>
