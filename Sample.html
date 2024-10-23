@@ -337,63 +337,101 @@ function toggleSubnavSyllabus(icon) {
 
             <!-- submenu end -->
             <!-- orginal button -->
-            <button onclick="scrollToTop()" class="nav-link" id="v-pills-Academics-tab" data-bs-toggle="pill"
-              data-bs-target="#v-pills-Academics" type="button" role="tab" aria-controls="v-pills-Academics"
-              aria-selected="true">
-              Academics
-              <div class="right-arrow" id="arrow-icon6">
-                <i onclick="toggleSubnav6(this)" class="fa-solid fa-plus"></i>
-              </div>
-            </button>
-            <!--  -->
-            <!-- subbutton -->
-           <!-- Syllabus button with + icon -->
-<button onclick="scrollToTop()" class="nav-link subnav6" style="display: none" id="v-pills-Syllabus-tab"
-data-bs-toggle="pill" data-bs-target="#v-pills-Syllabus" type="button" role="tab" aria-controls="v-pills-Syllabus"
-aria-selected="true">
-Syllabus
-<div class="right-arrow" id="arrow-icon-syllabus">
-  <i onclick="toggleSubnavSyllabus(this)" class="fa-solid fa-plus"></i>
-</div>
+              <button class="nav-link" id="v-pills-Academics-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Academics" 
+               type="button" role="tab" aria-controls="v-pills-Academics" aria-selected="true">
+               Academics
+               <div id="arrow-icon2" class="right-arrow">
+               <i onclick="toggleSubnav2(this)" class="fa-solid fa-plus"></i>
+                </div>
+               </button>
+          <!--sub nav for acadamics-->
+          <button onclick="scrollToTop()" class="nav-link subnav2" style="display: none" id="v-pills-Syllabus-tab" 
+          data-bs-toggle="pill" data-bs-target="#v-pills-Syllabus" type="button" role="tab" 
+          aria-controls="v-pills-Syllabus" aria-selected="true">
+           Syllabus
+          <div id="arrow-icon-sub-sub" class="right-arrow">
+          <i onclick="toggleSubSubnav(this)" class="fa-solid fa-plus"></i>
+          </div>
+        </button>
+<!---sub -sub nav-->
+<button onclick="scrollToTop()" class="nav-link subsubnav" style="display: none" id="v-pills-Syllabus-2021-tab" 
+        data-bs-toggle="pill" data-bs-target="#v-pills-Syllabus-2021" type="button" role="tab" aria-controls="v-pills-2023" 
+        aria-selected="true">
+        <a href="https://drive.google.com/file/d/110RyRu8ftoOmqKP1lRD4uEFKNuN81STu/view?usp=sharing">Syllabus 2021</a>
 </button>
-
-<!-- Submenu for Syllabus with years -->
-<button class="nav-link subnav-syllabus" style="display: none" onclick="scrollToTop()" data-bs-toggle="pill"
-data-bs-target="#v-pills-2021-Syllabus" type="button" role="tab" aria-controls="v-pills-2021-Syllabus"
-aria-selected="false">
-<a href="https://drive.google.com/file/d/110RyRu8ftoOmqKP1lRD4uEFKNuN81STu/view?usp=sharing">Syllabus 2021</a>
-
+<button onclick="scrollToTop()" class="nav-link subsubnav" style="display: none" id="v-pills-Syllabus-2022-tab" 
+        data-bs-toggle="pill" data-bs-target="#v-pills-Syllabus-2022" type="button" role="tab" aria-controls="v-pills-2023" 
+        aria-selected="true">
+        <a href="https://drive.google.com/file/d/1Nw1TkRN8Ih6u6DhLErltWyMXQgpmLbqY/view?usp=sharing">Syllabus 2022</a>
 </button>
-<button class="nav-link subnav-syllabus" style="display: none" onclick="scrollToTop()" data-bs-toggle="pill"
-data-bs-target="#v-pills-2022-Syllabus" type="button" role="tab" aria-controls="v-pills-2022-Syllabus"
-aria-selected="false">
-<a href="https://drive.google.com/file/d/1Nw1TkRN8Ih6u6DhLErltWyMXQgpmLbqY/view?usp=sharing">Syllabus 2022</a>
+<button onclick="scrollToTop()" class="nav-link subsubnav" style="display: none" id="v-pills-Syllabus-2023-tab" 
+        data-bs-toggle="pill" data-bs-target="#v-pills-Syllabus-2023" type="button" role="tab" aria-controls="v-pills-2023" 
+        aria-selected="true">
+        <a href="https://drive.google.com/file/d/1ArkVk_I073q0HF-9fNzMBmKebRcmx1lT/view?usp=sharing">Syllabus 2023</a>
 </button>
-<button class="nav-link subnav-syllabus" style="display: none" onclick="scrollToTop()" data-bs-toggle="pill"
-data-bs-target="#v-pills-2023-Syllabus" type="button" role="tab" aria-controls="v-pills-2023-Syllabus"
-aria-selected="false">
-<a href="https://drive.google.com/file/d/1ArkVk_I073q0HF-9fNzMBmKebRcmx1lT/view?usp=sharing">Syllabus 2023</a>
-</button>
-<button class="nav-link subnav-syllabus" style="display: none" onclick="scrollToTop()" data-bs-toggle="pill"
-data-bs-target="#v-pills-2024-Syllabus" type="button" role="tab" aria-controls="v-pills-2024-Syllabus"
-aria-selected="false">
-<a href="https://drive.google.com/file/d/1b6TJENh5AUBEILdehltZXYTeQlKRNoez/view?usp=sharing">Syllabus 2024</a>
+<button onclick="scrollToTop()" class="nav-link subsubnav" style="display: none" id="v-pills-Syllabus-2024-tab" 
+        data-bs-toggle="pill" data-bs-target="#v-pills-Syllabus-2024" type="button" role="tab" aria-controls="v-pills-2023" 
+        aria-selected="true">
+        <a href="https://drive.google.com/file/d/1b6TJENh5AUBEILdehltZXYTeQlKRNoez/view?usp=sharing">Syllabus 2024</a>
 </button>
 
 <!-- Regulations button -->
-<button onclick="scrollToTop()" class="nav-link subnav6" style="display: none" id="v-pills-Regulations-tab"
-data-bs-toggle="pill" data-bs-target="#v-pills-Regulations" type="button" role="tab"
-aria-controls="v-pills-Regulations" aria-selected="true">
-Regulations
+          <button onclick="scrollToTop()" class="nav-link subnav2" style="display: none" id="v-pills-Regulations-tab" 
+          data-bs-toggle="pill" data-bs-target="#v-pills-Regulations" type="button" role="tab" 
+          aria-controls="v-pills-Regulations" aria-selected="true">
+          Regulations
+         <div id="arrow-icon-sub-sub" class="right-arrow">
+<i onclick="toggleSubSubnav(this)" class="fa-solid fa-plus"></i>
+        </div>
+         </button>
+
+<!---newsletter tab-->
+<button class="nav-link" id="v-pills-Newsletter-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Newsletter" 
+type="button" role="tab" aria-controls="v-pills-Newsletter" aria-selected="true">
+Newsletter
+<div id="arrow-icon2" class="right-arrow">
+<i onclick="toggleSubnav2(this)" class="fa-solid fa-plus"></i>
+ </div>
 </button>
+ <!----sub nav for newsletter-->     
+        <button onclick="scrollToTop()" class="nav-link subnav2" style="display: none" id="v-pills-Newsletter-April-tab" 
+          data-bs-toggle="pill" data-bs-target="#v-pills-Newsletter-April" type="button" role="tab" 
+          aria-controls="v-pills-Newsletter-April" aria-selected="true">
+          
+          <a href="https://drive.google.com/file/d/12wmt0p30jTh1WmcSZMsJbeKuTHnrIELZ/view?usp=sharing">Newsletter April</a>
+        </button>
+        <button onclick="scrollToTop()" class="nav-link subnav2" style="display: none" id="v-pills-Newsletter-May-tab" 
+        data-bs-toggle="pill" data-bs-target="#v-pills-Newsletter-May" type="button" role="tab" 
+        aria-controls="v-pills-Newsletter-May" aria-selected="true">
+        
+        <a href="https://drive.google.com/file/d/1YmkUFCmzYwIqoXbGsf5Ugl1-UAqwox9P/view?usp=sharing">Newsletter May</a>
+      </button> 
+        <button onclick="scrollToTop()" class="nav-link subnav2" style="display: none" id="v-pills-Newsletter-June-tab" 
+          data-bs-toggle="pill" data-bs-target="#v-pills-Newsletter-June" type="button" role="tab" 
+          aria-controls="v-pills-Newsletter-June" aria-selected="true">
+          
+          <a href="https://drive.google.com/file/d/1dUTyWbD-1l0d8FTyt6pcRjy1lL3G-hMw/view?usp=sharing">Newsletter June</a>
+        </button> 
+        <button onclick="scrollToTop()" class="nav-link subnav2" style="display: none" id="v-pills-NewsletterJuly-tab" 
+          data-bs-toggle="pill" data-bs-target="#v-pills-Newsletter-July" type="button" role="tab" 
+          aria-controls="v-pills-Newsletter-July" aria-selected="true">
+          
+          <a href="https://drive.google.com/file/d/11qSPI7W-A0Qc2QdFnjxS6-wQ9t2hHOhn/view?usp=sharing">Newsletter July</a>
+        </button> 
+        <button onclick="scrollToTop()" class="nav-link subnav2" style="display: none" id="v-pills-Newsletter-August-tab" 
+          data-bs-toggle="pill" data-bs-target="#v-pills-Newsletter-August" type="button" role="tab" 
+          aria-controls="v-pills-Newsletter-August" aria-selected="true">
+          
+          <a href="https://drive.google.com/file/d/1T-ux6DFjo7zunxtO72w-r_8eqmNiLbAh/view?usp=sharing">Newsletter August</a>
+        </button> 
+        <button onclick="scrollToTop()" class="nav-link subnav2" style="display: none" id="v-pills-Newsletter-September-tab" 
+          data-bs-toggle="pill" data-bs-target="#v-pills-Newsletter-September" type="button" role="tab" 
+          aria-controls="v-pills-Newsletter-September" aria-selected="true">
+          
+          <a href="https://drive.google.com/file/d/1g32ZbfY6mPUQKlwfUc45vX6NtOdFoQ1w/view?usp=sharing">Newsletter September</a>
+        </button>      
 
-            
 
-            <button onclick="scrollToTop()" class="nav-link" id="v-pills-Newsletter-tab" data-bs-toggle="pill"
-              data-bs-target="#v-pills-Newsletter" type="button" role="tab" aria-controls="v-pills-Newsletter"
-              aria-selected="true">
-              Newsletter
-            </button>
             <button onclick="scrollToTop()" class="nav-link" id="v-pills-Lab-tab" data-bs-toggle="pill"
               data-bs-target="#v-pills-lab" type="button" role="tab" aria-controls="v-pills-lab" aria-selected="true">
               Lab
@@ -410,14 +448,14 @@ Regulations
 </button>
 
 <!-- Subnav for Research -->
-<button onclick="scrollToTop()" class="nav-link subnav2" style="display: none" id="v-pills-Staff-Publications-tab" 
-        data-bs-toggle="pill" data-bs-target="#v-pills-Staff-Publications" type="button" role="tab" 
-        aria-controls="v-pills-Staff-Publications" aria-selected="true">
+<button onclick="scrollToTop()" class="nav-link subnav2" style="display: none" id="v-pills-Staff-Patents-tab" 
+        data-bs-toggle="pill" data-bs-target="#v-pills-Staff-Patents" type="button" role="tab" 
+        aria-controls="v-pills-Staff-Patents" aria-selected="true">
         Staff Patents
 </button>
-<button onclick="scrollToTop()" class="nav-link subnav2" style="display: none" id="v-pills-Staff-Publications-tab" 
-        data-bs-toggle="pill" data-bs-target="#v-pills-Staff-Publications" type="button" role="tab" 
-        aria-controls="v-pills-Staff-Publications" aria-selected="true">
+<button onclick="scrollToTop()" class="nav-link subnav2" style="display: none" id="v-pills-Students-Patents-tab" 
+        data-bs-toggle="pill" data-bs-target="#v-pills-Students-Patents" type="button" role="tab" 
+        aria-controls="v-pills-Students-Patents" aria-selected="true">
         Students Patents
 </button>
 <button onclick="scrollToTop()" class="nav-link subnav2" style="display: none" id="v-pills-Staff-Publications-tab" 
@@ -429,40 +467,43 @@ Regulations
     </div>
 </button>
 <!---sub -sub nav-->
-<button onclick="scrollToTop()" class="nav-link subsubnav" style="display: none" id="v-pills-2023-tab" 
-        data-bs-toggle="pill" data-bs-target="#v-pills-2023" type="button" role="tab" aria-controls="v-pills-2023" 
+<button onclick="scrollToTop()" class="nav-link subsubnav" style="display: none" id="v-pills-Staff-Publications-2021-tab" 
+        data-bs-toggle="pill" data-bs-target="#v-pills-Staff-Publications-2021" type="button" role="tab" aria-controls="v-pills-2023" 
         aria-selected="true">
-        <a href="https://drive.google.com/file/d/1wXwZOhyOQoZSiahVsdxqUhAaSxaKgaLV/view?usp=sharing">Staff Publications 2021</a>
+        <a href="https://drive.google.com/file/d/1wXwZOhyOQoZSiahVsdxqUhAaSxaKgaLV/view?usp=sharing">
+          Staff Publications 2021</a>
         
 </button>
-<button onclick="scrollToTop()" class="nav-link subsubnav" style="display: none" id="v-pills-2022-tab" 
-        data-bs-toggle="pill" data-bs-target="#v-pills-2022" type="button" role="tab" aria-controls="v-pills-2022" 
+<button onclick="scrollToTop()" class="nav-link subsubnav" style="display: none" id="v-pills-Staff-Publications-2022-tab" 
+        data-bs-toggle="pill" data-bs-target="#v-pills-Staff-Publications-2022" type="button" role="tab" aria-controls="v-pills-2022" 
         aria-selected="true">
-        <a href="https://drive.google.com/file/d/1Dbe7SqqM1sgyGK92FwBY8RAU5FhStIbW/view?usp=sharing">Staff Publications 2022</a>
+        <a href="https://drive.google.com/file/d/1Dbe7SqqM1sgyGK92FwBY8RAU5FhStIbW/view?usp=sharing">
+          Staff Publications 2022</a>
 </button>
-<button onclick="scrollToTop()" class="nav-link subsubnav" style="display: none" id="v-pills-2024-tab" 
-        data-bs-toggle="pill" data-bs-target="#v-pills-2024" type="button" role="tab" aria-controls="v-pills-2024" 
+<button onclick="scrollToTop()" class="nav-link subsubnav" style="display: none" id="v-pills-Staff-Publications-2023-tab" 
+        data-bs-toggle="pill" data-bs-target="#v-pills-Staff-Publications-2023" type="button" role="tab" aria-controls="v-pills-2024" 
         aria-selected="true">
-        <a href="https://drive.google.com/file/d/1VYpqy0_PcvKjL9lMgL267gkOHVw2D_OQ/view?usp=sharing">Staff Publications 2023</a>
+        <a href="https://drive.google.com/file/d/1VYpqy0_PcvKjL9lMgL267gkOHVw2D_OQ/view?usp=sharing">
+          Staff Publications 2023</a>
 </button>
-<button onclick="scrollToTop()" class="nav-link subnav2" style="display: none" id="v-pills-Staff-Publications-tab" 
-        data-bs-toggle="pill" data-bs-target="#v-pills-Staff-Publications" type="button" role="tab" 
-        aria-controls="v-pills-Staff-Publications" aria-selected="true">
+<button onclick="scrollToTop()" class="nav-link subnav2" style="display: none" id="v-pills-Students-Publications-tab" 
+        data-bs-toggle="pill" data-bs-target="#v-pills-Students-Publications" type="button" role="tab" 
+        aria-controls="v-pills-Students-Publications" aria-selected="true">
         Students Publications  
 </button>
-<button onclick="scrollToTop()" class="nav-link subnav2" style="display: none" id="v-pills-Staff-Publications-tab" 
-        data-bs-toggle="pill" data-bs-target="#v-pills-Staff-Publications" type="button" role="tab" 
-        aria-controls="v-pills-Staff-Publications" aria-selected="true">
+<button onclick="scrollToTop()" class="nav-link subnav2" style="display: none" id="v-pills-Funded-Projects-tab" 
+        data-bs-toggle="pill" data-bs-target="#v-pills-Funded-Projects" type="button" role="tab" 
+        aria-controls="v-pills-Funded-Projects" aria-selected="true">
         Funded Projects
 </button>
-<button onclick="scrollToTop()" class="nav-link subnav2" style="display: none" id="v-pills-Staff-Publications-tab" 
-        data-bs-toggle="pill" data-bs-target="#v-pills-Staff-Publications" type="button" role="tab" 
-        aria-controls="v-pills-Staff-Publications" aria-selected="true">
+<button onclick="scrollToTop()" class="nav-link subnav2" style="display: none" id="v-Mou-tab" 
+        data-bs-toggle="pill" data-bs-target="#v-pills-Mou" type="button" role="tab" 
+        aria-controls="v-pills-Mou" aria-selected="true">
         Mou
 </button>
-<button onclick="scrollToTop()" class="nav-link subnav2" style="display: none" id="v-pills-Staff-Publications-tab" 
-        data-bs-toggle="pill" data-bs-target="#v-pills-Staff-Publications" type="button" role="tab" 
-        aria-controls="v-pills-Staff-Publications" aria-selected="true">
+<button onclick="scrollToTop()" class="nav-link subnav2" style="display: none" id="v-pills-Supervisor-Details-tab" 
+        data-bs-toggle="pill" data-bs-target="#v-pills-Supervisor-Details" type="button" role="tab" 
+        aria-controls="v-pills-Supervisor-Details" aria-selected="true">
         Supervisor Details
 </button>
 
