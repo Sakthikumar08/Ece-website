@@ -158,8 +158,7 @@
 
   <!-- Header area start -->
   <script>
-    // Function to toggle subnav for Research
-function toggleSubnav2(element) {
+   function toggleSubnav2(element) {
   var subnavElements = document.querySelectorAll('.subnav2');
   
   // Toggle visibility of subnav2 (Staff Publications and others under Research)
@@ -180,7 +179,7 @@ function toggleSubnav2(element) {
 function toggleSubSubnav(element) {
   var subSubnavElements = document.querySelectorAll('.subsubnav');
   
-  // Toggle visibility of subsubnav (2023, 2022, 2024 under Staff Publications)
+  
   subSubnavElements.forEach(function(subsubnav) {
     if (subsubnav.style.display === 'none') {
       subsubnav.style.display = 'block';
@@ -193,22 +192,7 @@ function toggleSubSubnav(element) {
     }
   });
 }
-function toggleSubnavSyllabus(icon) {
-  // Toggle the visibility of the subnav for syllabus
-  const subnavItems = document.querySelectorAll('.subnav-syllabus');
-  
-  subnavItems.forEach(item => {
-    if (item.style.display === 'none') {
-      item.style.display = 'block';
-      icon.classList.remove('fa-plus');
-      icon.classList.add('fa-minus');
-    } else {
-      item.style.display = 'none';
-      icon.classList.remove('fa-minus');
-      icon.classList.add('fa-plus');
-    }
-  });
-}
+
 
 
     // Function to fetch and insert the header
@@ -285,7 +269,7 @@ function toggleSubnavSyllabus(icon) {
             </button>
 
             <!-- Original Button -->
-            <button onclick="scrollToTop()" class="nav-link" id="v-pills-students-tab" data-bs-toggle="pill"
+           <!--  <button onclick="scrollToTop()" class="nav-link" id="v-pills-students-tab" data-bs-toggle="pill"
               data-bs-target="#v-pills-students" type="button" role="tab" aria-controls="v-pills-students"
               aria-selected="false">
               Students Corner
@@ -294,7 +278,7 @@ function toggleSubnavSyllabus(icon) {
               </div>
             </button>
 
-            <!-- Submenu Buttons (Initially Hidden) -->
+         
             <button class="nav-link subnav" style="display: none" onclick="scrollToTop()" data-bs-toggle="pill"
               data-bs-target="#v-pills-Industrial-Visit" type="button" role="tab"
               aria-controls="v-pills-Industrial-Visit" aria-selected="false">
@@ -307,7 +291,7 @@ function toggleSubnavSyllabus(icon) {
               aria-selected="false">
               Guest Lecture
             </button>
-            <!-- sub-sub -->
+           
 
             <button class="nav-link subnav" style="display: none" onclick="scrollToTop()" data-bs-toggle="pill"
               data-bs-target="#v-pills-National-Level-Symposium" type="button" role="tab"
@@ -333,7 +317,7 @@ function toggleSubnavSyllabus(icon) {
               data-bs-target="#v-pills-higher-studies" type="button" role="tab" aria-controls="v-pills-higher-studies"
               aria-selected="false">
               Higher Studies
-            </button>
+            </button> -->
 
             <!-- submenu end -->
             <!-- orginal button -->
@@ -345,6 +329,7 @@ function toggleSubnavSyllabus(icon) {
                 </div>
                </button>
           <!--sub nav for acadamics-->
+          
           <button onclick="scrollToTop()" class="nav-link subnav2" style="display: none" id="v-pills-Syllabus-tab" 
           data-bs-toggle="pill" data-bs-target="#v-pills-Syllabus" type="button" role="tab" 
           aria-controls="v-pills-Syllabus" aria-selected="true">
@@ -374,17 +359,45 @@ function toggleSubnavSyllabus(icon) {
         aria-selected="true">
         <a href="https://drive.google.com/file/d/1b6TJENh5AUBEILdehltZXYTeQlKRNoez/view?usp=sharing">Syllabus 2024</a>
 </button>
+<!---acadamics topper department-->
+<button onclick="scrollToTop()" class="nav-link subnav2" style="display: none" id="v-pills-Department-Toppers-tab" 
+data-bs-toggle="pill" data-bs-target="#v-pills-Department-Toppers" type="button" role="tab" 
+aria-controls="v-pills-Department-Toppers" aria-selected="true">
+Department Toppers
+<div id="arrow-icon-sub-sub" class="right-arrow">
+<i onclick="toggleSubSubnav(this)" class="fa-solid fa-plus"></i>
+</div>
+</button>
+<!---sub -sub nav-->
+<button onclick="scrollToTop()" class="nav-link subsubnav" style="display: none" id="v-pills-Toppers-2020-2024-tab" 
+data-bs-toggle="pill" data-bs-target="#v-pills-Toppers-2020-2024" type="button" role="tab" aria-controls="v-pills-Toppers-2020-2024" 
+aria-selected="true">
+<a href="https://drive.google.com/file/d/1CKKPUUczX8BagprehO5NcrddMu54SD6E/view?usp=sharing">Toppers 2020-2024</a>
+</button>
+<button onclick="scrollToTop()" class="nav-link subsubnav" style="display: none" id="v-pills-Toppers-2021-2025-tab" 
+data-bs-toggle="pill" data-bs-target="#v-pills-Toppers-2021-2025" type="button" role="tab" aria-controls="v-pills-Toppers-2021-2025" 
+aria-selected="true">
+<a href="https://drive.google.com/file/d/1twJc11d1Iw-_BN615bhyGOa-XDLJPIai/view?usp=sharing">Toppers 2021-2025</a>
+</button>
+<button onclick="scrollToTop()" class="nav-link subsubnav" style="display: none" id="v-pills-Toppers-2022-2026-tab" 
+data-bs-toggle="pill" data-bs-target="#v-pills-Toppers-2022-2026" type="button" role="tab" aria-controls="v-pills-Toppers-2022-2026" 
+aria-selected="true">
+<a href="https://drive.google.com/file/d/15RiMhtrfjW5XHhY7rV5NVHOOiFaMDLaX/view?usp=sharing">Toppers 2022-2026</a>
+</button>
+<button onclick="scrollToTop()" class="nav-link subsubnav" style="display: none" id="v-pills-Toppers-2023-2027-tab" 
+data-bs-toggle="pill" data-bs-target="#v-pills-Toppers-2023-2027" type="button" role="tab" aria-controls="v-pills-Toppers-2023-2027" 
+aria-selected="true">
+<a href="https://drive.google.com/file/d/149tTPVFqVY34cQAsmK0UlpngNwejGZ0K/view?usp=sharing">Toppers 2023-2027</a>
+</button>
 
 <!-- Regulations button -->
           <button onclick="scrollToTop()" class="nav-link subnav2" style="display: none" id="v-pills-Regulations-tab" 
           data-bs-toggle="pill" data-bs-target="#v-pills-Regulations" type="button" role="tab" 
           aria-controls="v-pills-Regulations" aria-selected="true">
           Regulations
-         <div id="arrow-icon-sub-sub" class="right-arrow">
-<i onclick="toggleSubSubnav(this)" class="fa-solid fa-plus"></i>
-        </div>
+         
          </button>
-
+       
 <!---newsletter tab-->
 <button class="nav-link" id="v-pills-Newsletter-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Newsletter" 
 type="button" role="tab" aria-controls="v-pills-Newsletter" aria-selected="true">
@@ -436,6 +449,90 @@ Newsletter
               data-bs-target="#v-pills-lab" type="button" role="tab" aria-controls="v-pills-lab" aria-selected="true">
               Lab
             </button>
+
+            <!---Activities tab-->
+            <button class="nav-link" id="v-pills-Activities-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Activities" 
+            type="button" role="tab" aria-controls="v-pills-Activities" aria-selected="true">
+            Activities
+            <div id="arrow-icon2" class="right-arrow">
+            <i onclick="toggleSubnav2(this)" class="fa-solid fa-plus"></i>
+             </div>
+            </button>
+       <!--sub nav for activities tab of Co-Curricular Activities-->
+       <button onclick="scrollToTop()" class="nav-link subnav2" style="display: none" id="v-pills-Co-Curricular-Activities-tab" 
+       data-bs-toggle="pill" data-bs-target="#v-pills-Co-Curricular-Activities" type="button" role="tab" 
+       aria-controls="v-pills-Co-Curricular-Activities" aria-selected="true">
+       Co-Curricular Activities
+       <div id="arrow-icon-sub-sub" class="right-arrow">
+       <i onclick="toggleSubSubnav(this)" class="fa-solid fa-plus"></i>
+       </div>
+     </button>
+<!---sub -sub nav-->
+<button onclick="scrollToTop()" class="nav-link subsubnav" style="display: none" id="v-pills-Department-Events-tab" 
+     data-bs-toggle="pill" data-bs-target="#v-pills-Department-Events" type="button" role="tab" aria-controls="v-pills-Department-Events" 
+     aria-selected="true">
+     Department-Events
+</button>
+<button onclick="scrollToTop()" class="nav-link subsubnav" style="display: none" id="v-pills-Guest-Lectures-tab" 
+     data-bs-toggle="pill" data-bs-target="#v-pills-Guest-Lectures" type="button" role="tab" aria-controls="v-pills-Guest-Lectures" 
+     aria-selected="true">
+     Guest Lectures
+</button>
+<button onclick="scrollToTop()" class="nav-link subsubnav" style="display: none" id="v-pills-Industrial-Visits-tab" 
+     data-bs-toggle="pill" data-bs-target="#v-pills-Industrial-Visits" type="button" role="tab" aria-controls="v-pills-Industrial-Visits" 
+     aria-selected="true">
+     Industrial Visits
+</button>
+<button onclick="scrollToTop()" class="nav-link subsubnav" style="display: none" id="v-pills-Professional-Societies-tab" 
+     data-bs-toggle="pill" data-bs-target="#v-pills-Professional-Societies" type="button" role="tab" aria-controls="v-pills-Professional-Societies" 
+     aria-selected="true">
+     Professional Societies
+</button>
+<button onclick="scrollToTop()" class="nav-link subsubnav" style="display: none" id="v-pills-Special-Achievements-tab" 
+     data-bs-toggle="pill" data-bs-target="#v-pills-Special-Achievements" type="button" role="tab" aria-controls="v-pills-Special-Achievements" 
+     aria-selected="true">
+     Special Achievements
+</button>
+<button onclick="scrollToTop()" class="nav-link subsubnav" style="display: none" id="v-pills-VAC-tab" 
+     data-bs-toggle="pill" data-bs-target="#v-pills-VAC" type="button" role="tab" aria-controls="v-pills-VAC" 
+     aria-selected="true">
+     VAC
+</button>
+<button onclick="scrollToTop()" class="nav-link subsubnav" style="display: none" id="v-pills-SEERA-tab" 
+     data-bs-toggle="pill" data-bs-target="#v-pills-SEERA" type="button" role="tab" aria-controls="v-pills-SEERA" 
+     aria-selected="true">
+     SEERA
+</button>
+<button onclick="scrollToTop()" class="nav-link subsubnav" style="display: none" id="v-pills-Club-activities-tab" 
+     data-bs-toggle="pill" data-bs-target="#v-pills-Club-activities" type="button" role="tab" aria-controls="v-pills-Club-activities" 
+     aria-selected="true">
+     Club activities
+</button>
+            <!--sub nav for activities tab of Extracurricular-Activities-->
+            <button onclick="scrollToTop()" class="nav-link subnav2" style="display: none" id="v-pills-Extracurricular-Activities-tab" 
+             data-bs-toggle="pill" data-bs-target="#v-pills-Extracurricular-Activities" type="button" role="tab" 
+             aria-controls="v-pills-Extracurricular-Activities" aria-selected="true">
+             Extracurricular Activities
+            <div id="arrow-icon-sub-sub" class="right-arrow">
+            <i onclick="toggleSubSubnav(this)" class="fa-solid fa-plus"></i>
+            </div>
+           </button>
+<!---sub -sub nav-->
+<button onclick="scrollToTop()" class="nav-link subsubnav" style="display: none" id="v-pills-Teachers-Day-Celebration-tab" 
+data-bs-toggle="pill" data-bs-target="#v-pills-Teachers-Day-Celebration" type="button" role="tab" aria-controls="v-pills-Teachers-Day-Celebration" 
+aria-selected="true">
+Teachers Day Celebration
+</button>
+<button onclick="scrollToTop()" class="nav-link subsubnav" style="display: none" id="v-pills-College-Day-Celebration-tab" 
+data-bs-toggle="pill" data-bs-target="#v-pills-College-Day-Celebration" type="button" role="tab" aria-controls="v-pills-College-Day-Celebration" 
+aria-selected="true">
+College Day Celebration
+</button>
+<button onclick="scrollToTop()" class="nav-link subsubnav" style="display: none" id="v-pills-NGO-Activities-tab" 
+data-bs-toggle="pill" data-bs-target="#v-pills-NGO-Activities" type="button" role="tab" aria-controls="v-pills-NGO-Activities" 
+aria-selected="true">
+NGO Activities
+</button>
             
            
 
