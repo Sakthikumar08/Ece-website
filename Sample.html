@@ -8,6 +8,7 @@
   <!-- css -->
   <link rel="stylesheet" href="/assets/css/style.css" />
   <link rel="stylesheet" href="/assets/css/course.css" />
+ 
   <!-- CSS here -->
   <link rel="stylesheet" href="/assets/css/meanmenu.min.css" />
   <link rel="stylesheet" href="/assets/css/main.css" />
@@ -20,6 +21,63 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+   <!-- added the Carosels links and css -->
+     <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        .carousel-item img {
+            height: 500px;
+            object-fit: cover;
+            background-color: #eee; 
+        }
+        .carousel-caption {
+            background-color: rgba(0,0,0,0.6);
+            border-radius: 10px;
+            padding: 20px;
+        }
+    </style> 
+
+    <style>
+    /* Custom Carousel Styling */
+    #placementCarousel {
+        max-width: 400px; /* Optimal width for 4:5 ratio */
+        margin: 0 auto;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    
+    .carousel-control-prev, 
+    .carousel-control-next {
+        width: auto;
+        opacity: 1;
+    }
+    
+    .carousel-control-prev-icon, 
+    .carousel-control-next-icon {
+        background-size: 1.5rem;
+    }
+    
+    .carousel-indicators button {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin: 0 5px;
+    }
+/* ed cell */
+    .gallery img {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    object-fit: cover;
+    height: 150px;
+    width: 100%;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+}
+</style>
 </head>
 
 <body>
@@ -229,7 +287,38 @@
               data-bs-target="#v-pills-faculty" type="button" role="tab" aria-controls="v-pills-faculty"
               aria-selected="false">
               Faculty
+              <div id="arrow-icon4" class="right-arrow">
+                <i onclick="toggleSubnav4(this)" class="fa-solid fa-plus"></i>
+              </div>
             </button>
+
+             <!-- subnav -->
+            <button onclick="scrollToTop()" class="nav-link subnav4" style="display: none" id="v-pills-FDPorg-tab"
+              data-bs-toggle="pill" data-bs-target="#v-pills-FDPorg" type="button" role="tab"
+              aria-controls="v-pills-FDPorg" aria-selected="true">
+              FDP Organised
+            </button>
+            <button onclick="scrollToTop()" class="nav-link subnav4" style="display: none" id="v-pills-FDPattend-tab"
+              data-bs-toggle="pill" data-bs-target="#v-pills-FDPattend" type="button" role="tab" aria-controls="v-pills-FDPattend"
+              aria-selected="true">
+              FDP Attended
+            </button>
+             <button onclick="scrollToTop()" class="nav-link subnav4" style="display: none" id="v-pills-Consultancywork-tab"
+              data-bs-toggle="pill" data-bs-target="#v-pills-Consultancywork" type="button" role="tab" aria-controls="v-pills-Consultancywork"
+              aria-selected="true">
+              Consultancy works
+            </button>
+             <button onclick="scrollToTop()" class="nav-link subnav4" style="display: none" id="v-pills-ProffessionalSociety-tab"
+              data-bs-toggle="pill" data-bs-target="#v-pills-ProffessionalSociety" type="button" role="tab" aria-controls="v-pills-ProffessionalSociety"
+              aria-selected="true">
+              Proffessional Society
+            </button>
+             <button onclick="scrollToTop()" class="nav-link subnav4" style="display: none" id="v-pills-StaffRecog-tab"
+              data-bs-toggle="pill" data-bs-target="#v-pills-StaffRecog" type="button" role="tab" aria-controls="v-pills-StaffRecog"
+              aria-selected="true">
+              Staff recognitions
+            </button>
+            <!--  -->
 
             <!-- Original Button -->
              <!-- add 4 new and 3 removed -->
@@ -409,7 +498,7 @@
             <button onclick="scrollToTop()" class="nav-link subnav2" style="display: none" id="v-pills-Mou-tab"
               data-bs-toggle="pill" data-bs-target="#v-pills-Mou" type="button" role="tab" aria-controls="v-pills-Mou"
               aria-selected="true">
-              Mou
+              MoU
             </button>
            
              
@@ -446,23 +535,10 @@
               data-bs-target="#v-pills-Teaching-and-Learning-Process" type="button" role="tab"
               aria-controls="v-pills-Teaching-and-Learning-Process" aria-selected="true">
               Teaching and Learning Process
-              <div id="arrow-icon4" class="right-arrow">
-                <i onclick="toggleSubnav4(this)" class="fa-solid fa-plus"></i>
-              </div>
+              
             </button>
             <!--  -->
-            <!-- subnav -->
-            <button onclick="scrollToTop()" class="nav-link subnav4" style="display: none" id="v-pills-CO-PO-tab"
-              data-bs-toggle="pill" data-bs-target="#v-pills-CO-PO" type="button" role="tab"
-              aria-controls="v-pills-CO-PO" aria-selected="true">
-              CO-PO
-            </button>
-            <button onclick="scrollToTop()" class="nav-link subnav4" style="display: none" id="v-pills-PSO-tab"
-              data-bs-toggle="pill" data-bs-target="#v-pills-PSO" type="button" role="tab" aria-controls="v-pills-PSO"
-              aria-selected="true">
-              PSO
-            </button>
-            <!--  -->
+           
            <!-- <button class="nav-link" id="v-pills-Feedback-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Feedback"
               type="button" role="tab" aria-controls="v-pills-Feedback" aria-selected="true">
               Feedback
@@ -483,6 +559,12 @@
           <div class="tab-pane fade" id="v-pills-faculty" role="tabpanel" aria-labelledby="v-pills-faculty-tab">
             <div class="container">
               <h2 class="head">Faculty</h2>
+             <!--  -->
+       
+
+        
+             <!--  -->
+
               <div class="row">
 
                  <div class="col-lg-4">
@@ -492,8 +574,8 @@
                         <div class="back-content">
                           <img src="./staff/1.jpg" alt="" />
                           <div class="faculty">
-                            <h3>Dr.S.Rajesh Kannan</h3>
-                            <p>Associate Professor & Head of the Department</p>
+                            <h3>Dr.S.RajeshKannan</h3>
+                            <p>Associate Professor & HOD</p>
                             <a href="./staff profiles/S Rajesh Kannan.pdf">Know More</a>
                           </div>
                         </div>
@@ -1054,6 +1136,47 @@
           </div>
   <!----staff-detail end -->
 
+         <!-- Faculty tabs -->
+          <div class="tab-pane fade" id="v-pills-FDPorg" role="tabpanel" aria-labelledby="v-pills-FDPorg-tab">
+            <h2 class="head">FDP Organised</h2>
+             <ul class="pdf">
+                <li><a href="./Faculty-tab/FDP org.pdf"><h2>FDP Organised<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
+             </ul>
+
+          </div>
+
+          <div class="tab-pane fade" id="v-pills-FDPattend" role="tabpanel" aria-labelledby="v-pills-FDPattend-tab">
+            <h2 class="head">FDP Attended</h2>
+             <ul class="pdf">
+                <li><a href="./Faculty-tab/FDP attended.pdf"><h2>FDP Attended<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
+             </ul>
+
+          </div>
+
+           <div class="tab-pane fade" id="v-pills-Consultancywork" role="tabpanel" aria-labelledby="v-pills-Consultancywork-tab">
+            <h2 class="head">Consultancy works</h2>
+             <ul class="pdf">
+                <li><a href="./Faculty-tab/CONSULTANCY WORKS.pdf"><h2>Consultancy works<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
+             </ul>
+
+          </div>
+
+          <div class="tab-pane fade" id="v-pills-ProffessionalSociety" role="tabpanel" aria-labelledby="v-pills-ProffessionalSociety-tab">
+            <h2 class="head">Proffessional Society</h2>
+             <ul class="pdf">
+                <li><a href="./Faculty-tab/Staff in Professional Society.pdf"><h2> Staff in Proffessional Society<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
+             </ul>
+
+          </div>
+
+           <div class="tab-pane fade" id="v-pills-StaffRecog" role="tabpanel" aria-labelledby="v-pills-StaffRecog">
+            <h2 class="head">Staff Recognition</h2>
+             <ul class="pdf">
+                <li><a href="./Student Achievement/Competitions_merged.pdf"><h2>Student Achievements<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
+             </ul>
+
+          </div>
+        
 
           <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
             <h2 class="head">
@@ -1178,18 +1301,48 @@
 
           <div class="tab-pane fade" id="v-pills-students" role="tabpanel" aria-labelledby="v-pills-students-tab">
             <h2 class="head">Students Corner</h2>
-            <p align="justify"><b>Welcome to The Student's Corner, a vibrant hub for all student activities and achievements. This section showcases various opportunities, events, and accomplishments that contribute to the holistic development of students. Whether you are looking to engage in clubs, explore higher studies, participate in sports, or gain industry exposure, this section serves as a gateway to your extracurricular and professional growth.</b></p>
+           <h2 class="head">Students Corner</h2>
+  <p align="justify"><b>Welcome to The Student's Corner, a vibrant hub for all student activities and achievements. This section showcases various opportunities, events, and accomplishments that contribute to the holistic development of students. Whether you are looking to engage in clubs, explore higher studies, participate in sports, or gain industry exposure, this section serves as a gateway to your extracurricular and professional growth.</b></p>
 
-            <h2 class="head">What You Will Find Here:</h2>
-            <ul>
-            <li><p align="justify"><b>Clubs: Diverse clubs for technical, cultural, and social engagement, offering students a platform to explore their interests and talents.</b></p></li>
-            <li><p align="justify"><b>Higher Studies: Guidance and resources for pursuing education globally, including information on entrance exams, scholarships, and university applications.</b></p></li>
-            <li><p align="justify"><b>Sports: Updates on events, tournaments, and athletic achievements, highlighting student participation and success in various sports.</b></p></li>
-            <li><p align="justify"><b>Symposiums: Platforms for innovation, technical discussions, and knowledge-sharing through student-led conferences and competitions.</b></p></li>
-            <li><p align="justify"><b>Industrial Visits: Real-world exposure through industry tours, enhancing practical knowledge and bridging the gap between academics and industry demands.</b></p></li>
-            <li><p align="justify"><b>Guest Lectures: Insights from experts and professionals across various fields, providing students with valuable knowledge and career guidance.</b></p></li>
-            <li><p align="justify"><b>Achievements: Celebrating student success in academics, research, competitions, and extracurricular activities.</b></p></li>
-          </ul>
+  <h2 class="head">What You Will Find Here:</h2>
+  <ul class="subnav-items">
+    <li>
+      <p align="justify"><b>Student Chapters: </b>Diverse clubs for technical, cultural, and social engagement, offering students a platform to explore their interests and talents.</p>
+      <button class="nav-button" onclick="navigateToSubnav('v-pills-studentchapter')">Explore Student Chapters</button>
+    </li>
+    <li>
+      <p align="justify"><b>Higher Studies: </b>Guidance and resources for pursuing education globally, including information on entrance exams, scholarships, and university applications.</p>
+      <button class="nav-button" onclick="navigateToSubnav('v-pills-higher-studies')">Explore Higher Studies</button>
+    </li>
+    <li>
+      <p align="justify"><b>Sports: </b>Updates on events, tournaments, and athletic achievements, highlighting student participation and success in various sports.</p>
+      <button class="nav-button" onclick="navigateToSubnav('v-pills-sports')">Explore Sports</button>
+    </li>
+    <li>
+      <p align="justify"><b>Student Achievements: </b>Celebrating student success in academics, research, competitions, and extracurricular activities.</p>
+      <button class="nav-button" onclick="navigateToSubnav('v-pills-studentachievements')">View Achievements</button>
+    </li>
+    <li>
+      <p align="justify"><b>Industrial Visits: </b>Real-world exposure through industry tours, enhancing practical knowledge and bridging the gap between academics and industry demands.</p>
+      <button class="nav-button" onclick="navigateToSubnav('v-pills-Industrial-Visit')">View Industrial Visits</button>
+    </li>
+    <li>
+      <p align="justify"><b>ED Cell: </b>Insights from experts and professionals across various fields, providing students with valuable knowledge and career guidance.</p>
+      <button class="nav-button" onclick="navigateToSubnav('v-pills-ed-cell')">Explore ED Cell</button>
+    </li>
+    <li>
+      <p align="justify"><b>Placements: </b>Information about career opportunities and placement activities for students.</p>
+      <button class="nav-button" onclick="navigateToSubnav('v-pills-placements')">View Placements</button>
+    </li>
+    <li>
+      <p align="justify"><b>NGO Activities: </b>Student participation in social work and community service initiatives.</p>
+      <button class="nav-button" onclick="navigateToSubnav('v-pills-ngo')">Explore NGO Activities</button>
+    </li>
+    <li>
+      <p align="justify"><b>Academic Achievements: </b>Recognition of students who have excelled academically.</p>
+      <button class="nav-button" onclick="navigateToSubnav('v-pills-academic-achievements')">View Academic Achievements</button>
+    </li>
+  </ul>
           <p align="justify"><b>
             This section captures the dynamic spirit of our students, fostering an environment that encourages learning, collaboration, and excellence beyond academics.
           </b></p>
@@ -1198,6 +1351,60 @@
 
           <div class="tab-pane fade" id="v-pills-studentachievements" role="tabpanel" aria-labelledby="v-pills-studentachievements-tab">
             <h2 class="head">Student Achievements</h2>
+            <div id="achievementCarousel" class="carousel slide carousel-fade mb-4" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#achievementCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#achievementCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#achievementCarousel" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#achievementCarousel" data-bs-slide-to="3"></button>
+                <button type="button" data-bs-target="#achievementCarousel" data-bs-slide-to="4"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="Student Achievement/img/TNwise25.jpg" class="d-block w-100" alt="Achievement 1" onerror="this.style.opacity='0'">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>TNWISE 2025</h5>
+                        <p>Our students won first prize 50,000 in the TNWISE 2025</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Student Achievement/img/Empower.jpeg" class="d-block w-100" alt="Achievement 2" onerror="this.style.opacity='0'">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Empowertech-national level Hackathon</h5>
+                        <p>Our students won first prize 10,000 in the Empower Tech 2025</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Student Achievement/img/Nexathon.jpeg" class="d-block w-100" alt="Achievement 3" onerror="this.style.opacity='0'">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Nexathon’25</h5>
+                        <p>2nd Prize-Internship at Enlight Wisdom</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Student Achievement/img/gentronix.jpg" class="d-block w-100" alt="Achievement 4" onerror="this.style.opacity='0'">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Genetrix 2k25</h5>
+                        <p>Our students won first prize 30,000 in the Genetrix 2k25</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Student Achievement/img/TNwise.jpeg" class="d-block w-100" alt="Achievement 5" onerror="this.style.opacity='0'">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>TNWISE 2025 Tamilnadu centre of excellence for Advanced manufacturing (TANCAM)</h5>
+                        <p>Our students won Special Prize Rs10,000 in the TNWISE 2025 </p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#achievementCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#achievementCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
             <ul class="pdf">
                 <li><a href="./Student Achievement/Competitions_merged.pdf"><h2>Student Achievements<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
              </ul>  
@@ -1206,47 +1413,167 @@
           <div class="tab-pane fade" id="v-pills-Industrial-Visit" role="tabpanel"
             aria-labelledby="v-pills-Industrial-Visit-tab">
             <h2 class="head">Industrial Visit</h2>
-            
-          <p align="justify"><b>  An Industrial visit gives the student knowledge and exposure needed to grasp certain engineering techniques and terminologies for easier understanding. An in-plant training increases a student's. opportunity of get a job after graduation. An in-plant training adds more experience to the portfolio of the student
-            
-            </b></p>
+          <p align="justify"><b>An Industrial visit gives the student knowledge and exposure needed to grasp certain engineering techniques and terminologies for easier understanding. An in-plant training increases a student's opportunity of getting a job after graduation. An in-plant training adds more experience to the portfolio of the student.</b></p>
+    
+    <!-- Image Carousel -->
+    <div id="industrialVisitCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#industrialVisitCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#industrialVisitCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#industrialVisitCarousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#industrialVisitCarousel" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#industrialVisitCarousel" data-bs-slide-to="4"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./Industrial viist/img/NLC.png" class="d-block w-100" alt="NLC Visit">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>NLC, Neyveli</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./Industrial viist/img/NIOT.png" class="d-block w-100" alt="SHAR-ISRO Visit">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>SHAR-ISRO, Sriharikota</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./Industrial viist/img/NLC1.jpeg" class="d-block w-100" alt="NIOT Visit">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>NIOT, Pallikaranai</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./Industrial viist/img/ISRO.png" class="d-block w-100" alt="DTE & ATS Complex Visit">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>DTE & ATS Complex</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./Industrial viist/img/NIL.png" class="d-block w-100" alt="Chennai Airport Visit">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Chennai Airport</h5>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#industrialVisitCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#industrialVisitCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    
+    <!-- Major Industries Visited -->
+    <div class="industries-visited mt-4">
+        <h3 class="head">Major Industries Visited</h3>
+        <div class="industry-card">
+            <h4>NLC, Neyveli</h4>
+            <p>Neyveli Lignite Corporation (NLC) is a government-owned lignite mining and power generation company. Students gain insights into lignite mining operations, thermal power generation, and environmental management practices.</p>
+        </div>
+        <div class="industry-card">
+            <h4>SHAR-ISRO, Sriharikota</h4>
+            <p>Satish Dhawan Space Centre (SHAR) is the primary launch center of the Indian Space Research Organisation (ISRO). Visits provide exposure to rocket assembly, launch operations, and India's space program achievements.</p>
+        </div>
+        <div class="industry-card">
+            <h4>NIOT, Pallikaranai</h4>
+            <p>The National Institute of Ocean Technology develops technologies for sustainable harvesting of non-living and living resources in India's exclusive economic zone. Students learn about marine technology and ocean energy systems.</p>
+        </div>
+        <div class="industry-card">
+            <h4>DTE & ATS Complex, Chennai</h4>
+            <p>The Directorate of Technical Education and Advanced Training School complex provides insights into technical education administration and advanced skill development programs in engineering fields.</p>
+        </div>
+        <div class="industry-card">
+            <h4>Chennai Airport</h4>
+            <p>Industrial visits to Chennai International Airport expose students to airport operations, air traffic control systems, aircraft maintenance, and aviation infrastructure management.</p>
+        </div>
+    </div>
             
             <!--  -->
-            <img src="./Industrial viist/IV3rd26.png" 
+            <!-- <img src="./Industrial viist/IV3rd26.png" 
      alt="Industrial Visit Banner" 
-     class="responsive-img" />
+     class="responsive-img" /> -->
 
             <!--  -->
              <h2 class="head">Odd Semester (Academic Year - 2024 - 2025)</h2>
              <ul class="pdf">
                 <li><a href="./Industrial viist/IV (1).pdf"><h2> IV Details (2023-2025)<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
-                <li><a href="./Industrial viist/Industrial Visit Details 3 years.pdf"><h2> IV Details<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
-                <li><a href="./Industrial viist/IV Photos for website.pdf"><h2> IV Photos<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
-                <li><a href="./Industrial viist/odd-IV-2nd.pdf"><h2>Second Year<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
-                <li><a href="./Industrial viist/odd-IV-3rd.pdf"><h2>Third Year<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
-                <li><a href="./Industrial viist/odd-IV-4th.pdf"><h2>Fourth Year<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
 
               </ul>
              
              
-             <h2 class="head">Odd Semester (Academic Year - 2023 - 2024)</h2>
-             <ul class="pdf">
-                <li><a href="#"><h2>Second Year<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
-                <li><a href="#"><h2>Third Year<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
-                <li><a href="#"><h2>Fourth Year<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
-             </ul>
-             
-             <h2 class="head">Even Semester (Academic Year - 2023 - 2024)</h2>
-             <ul class="pdf">
-                <li><a href="#"><h2>Second Year<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
-                <li><a href="#"><h2>Third Year<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
-                <li><a href="#"><h2>Fourth Year<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
-             </ul>
+          
              
           </div>
 
            <div class="tab-pane fade" id="v-pills-ngo" role="tabpanel" aria-labelledby="v-pills-ngo-tab">
             <h2 class="head">NGO</h2>
+<!-- carosels starts -->
+             <div id="ngoCarousel" class="carousel slide mb-4" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#ngoCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#ngoCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#ngoCarousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#ngoCarousel" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#ngoCarousel" data-bs-slide-to="4"></button>
+        </div>
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <img src="Ngo/img/2.jpg" class="d-block w-100" alt="NGO Activity 1" style="height: 400px; object-fit: cover;">
+                <!-- div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-3">
+                    <h5>Community Outreach Program</h5>
+                    <p>Students participating in rural education initiative (2023)</p>
+                </div> -->
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <img src="Ngo/img/1.jpg" class="d-block w-100" alt="NGO Activity 2" style="height: 400px; object-fit: cover;">
+              <!--   <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-3">
+                    <h5>Environmental Awareness</h5>
+                    <p>Tree plantation drive organized by students (2024)</p>
+                </div> -->
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <img src="Ngo/img/3.jpg" class="d-block w-100" alt="NGO Activity 3" style="height: 400px; object-fit: cover;">
+               <!--  <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-3">
+                    <h5>Health Camp</h5>
+                    <p>Free medical checkup camp in nearby village (2023)</p>
+                </div> -->
+            </div>
+            
+            <!-- Slide 4 -->
+            <div class="carousel-item">
+                <img src="Ngo/img/4.jpg" class="d-block w-100" alt="NGO Activity 4" style="height: 400px; object-fit: cover;">
+               <!--  <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-3">
+                    <h5>Skill Development Workshop</h5>
+                    <p>Vocational training for underprivileged youth (2024)</p>
+                </div> -->
+            </div>
+            
+            <!-- Slide 5 -->
+            <div class="carousel-item">
+                <img src="Ngo/img/5.jpg" class="d-block w-100" alt="NGO Activity 5" style="height: 400px; object-fit: cover;">
+               <!--  <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-3">
+                    <h5>Fundraising Event</h5>
+                    <p>Annual charity fundraiser for local orphanage (2025)</p>
+                </div> -->
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#ngoCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#ngoCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+    <!-- carosels end -->
+
             <ul class="pdf">
                 <li><a href="./Ngo/NGO.pdf"><h2>NGO 2023-2025<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
              </ul>  
@@ -1254,113 +1581,175 @@
 
           
 
-          <!-- removed symposium tab -->
-         <!--  <div class="tab-pane fade" id="v-pills-National-Level-Symposium" role="tabpanel"
-            aria-labelledby="v-pills-National-Level-Symposium">
-            <h2 class="head">National Level Technical Symposium</h2>
-            <h2 class="head">Symposium 2012-2013</h2>
-            <ul class="pdf">
-              <li><a href="./Symposium/Symposium 2012-13.pdf"><h2><i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
-           </ul>
-           <h2 class="head">Symposium 2013-2014</h2>
-           <ul class="pdf">
-             <li><a href="./Symposium/Symposium 2013-14.pdf"><h2><i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
-           </ul>
-           <h2 class="head">Symposium 2014-2015</h2>
-           <ul class="pdf">
-            <li><a href="./Symposium/Symposium 2014-15.pdf"><h2><i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
-           </ul>
-           <h2 class="head">Symposium 2015-2016</h2>
-           <ul class="pdf">
-            <li><a href="./Symposium/Symposium 2015-16.pdf"><h2><i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
-           </ul>
-           <h2 class="head">Symposium 2016-2017</h2>
-           <ul class="pdf">
-             <li><a href="./Symposium/Symposium 2016-17.pdf"><h2><i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
-           </ul>
-           <h2 class="head">Symposium 2017-2018</h2>
-           <ul class="pdf">
-             <li><a href="./Symposium/Symposium 2017-18.pdf"><h2><i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
-           </ul>
-           <h2 class="head">Symposium 2018-2019</h2>
-           <ul class="pdf">
-             <li><a href="./Symposium/Symposium 2018-19.pdf"><h2><i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
-           </ul>
-           
-          </div> -->
+       
 
-          <!-- removed guest lecture tab -->
-         <!--  <div class="tab-pane fade" id="v-pills-Guest-Lecture" role="tabpanel"
-            aria-labelledby="v-pills-Guest-Lecture-tab">
-            <h2 class="head">Guest Lecture</h2>
-
-             <h2 class="head">Odd Semester (Academic Year - 2023 - 2024)</h2>
-             <ul class="pdf">
-                <li><a href="./Guest lecture/odd-gl1-2nd.pdf"><h2>Second Year<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
-                <li><a href="./Guest lecture/odd-gl1-4th.pdf"><h2>Fouth Year<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
-                <li><a href="./Guest lecture/odd-gl2-2nd.pdf"><h2>Second Year<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
-                <li><a href="./Guest lecture/odd-gl2-4th.pdf"><h2>Fourth Year<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
-             </ul>
-             
-             <h2 class="head">Even Semester (Academic Year - 2023 - 2024)</h2>
-             <ul class="pdf">
-                <li><a href="./Guest lecture/even-gl-2nd.pdf"><h2>Second Year<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
-                <li><a href="./Guest lecture/even-gl-3rd.pdf"><h2>Third Year<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
-                <li><a href="./Guest lecture/even-gl2-2nd.pdf"><h2>Second Year<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
-             </ul>
-          </div> -->
-          
-
-          <!-- removed clubs tab -->
-          <!-- <div class="tab-pane fade" id="v-pills-clubs" role="tabpanel" aria-labelledby="v-pills-clubs-tab">
-            <h2 class="head">Clubs</h2>
-            <ul class="pdf">
-              <li><a href="./INNOVATION HARDWARE HACKATHON.pdf"><h2>Innovation Hardware Hackathon<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
-           </ul> 
-          </div> -->
-
-          <div class="tab-pane fade" id="v-pills-Academic-Achievements" role="tabpanel"
-            aria-labelledby="v-pills-Academic-Achievements-tab">
+          <div class="tab-pane fade" id="v-pills-academic-achievements" role="tabpanel"
+            aria-labelledby="v-pills-academic-chievements-tab">
             <h2 class="head">Academic Achievements</h2>
-            <h2 class="head">Toppers 2020-2024 Batch</h2>
-             <ul class="pdf">
-                <li><a href="./Toppers/Toppers 20-24.pdf"><h2>Toppers<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
-             </ul>  
-             
-             <h2 class="head">Toppers 2021-2025 Batch</h2>
-             <ul class="pdf">
-                <li><a href="./Toppers/Topppers 21-25.pdf"><h2>Toppers<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
-             </ul>   
-             
-             <h2 class="head">Toppers 2022-2026 Batch</h2>
-             <ul class="pdf">
-                <li><a href="./Toppers/Toppers 22-26.pdf"><h2>Toppers<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
-             </ul> 
-             
-             <h2 class="head">Toppers 2023-2027 Batch</h2>
-             <ul class="pdf">
-                <li><a href="./Toppers/Toppers 23-27.pdf"><h2>Toppers<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
-             </ul>  
-          </div>
+            
+            <h2 class="head">Toppers 2022-2026 Batch</h2>
+            
+            <div class="toppers-images">
+                <img src="./Toppers/2026-1.jpg" alt="Toppers List Part 1" class="img-fluid" style="width: 100%; height: auto; margin-bottom: 20px;">
+                <img src="./Toppers/2026-2.jpg" alt="Toppers List Part 2" class="img-fluid" style="width: 100%; height: auto;">
+            </div>
+        </div>
 
           <div class="tab-pane fade" id="v-pills-placements" role="tabpanel" aria-labelledby="v-pills-placements-tab">
             <h2 class="head">Placement</h2>
+
+             <!-- Placement Image Carousel (4:5 ratio) -->
+    <div id="placementCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#placementCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#placementCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#placementCarousel" data-bs-slide-to="2"></button>
+           <!--  <button type="button" data-bs-target="#placementCarousel" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#placementCarousel" data-bs-slide-to="4"></button> -->
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./Placements/Poster/EDA.jpg" class="d-block w-100" style="aspect-ratio: 4/5; object-fit: cover;" alt="Placement Drive 1">
+               <!--  <div class="carousel-caption d-none d-md-block">
+                    <h5>Placement Drive 2024</h5>
+                </div> -->
+            </div>
+            <div class="carousel-item">
+                <img src="./Placements/Poster/Kaar.jpg" class="d-block w-100" style="aspect-ratio: 4/5; object-fit: cover;" alt="Placement Drive 2">
+                <!-- <div class="carousel-caption d-none d-md-block">
+                    <h5>Campus Recruitment</h5>
+                </div> -->
+            </div>
+            <div class="carousel-item">
+                <img src="./Placements/Poster/intelsat.jpg" class="d-block w-100" style="aspect-ratio: 4/5; object-fit: cover;" alt="Placement Drive 3">
+               <!--  <div class="carousel-caption d-none d-md-block">
+                    <h5>Company Presentation</h5>
+                </div> -->
+            </div>
+         <!--    <div class="carousel-item">
+                <img src="./Placements/placement4.jpg" class="d-block w-100" style="aspect-ratio: 4/5; object-fit: cover;" alt="Placement Drive 4">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Interview Session</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./Placements/placement5.jpg" class="d-block w-100" style="aspect-ratio: 4/5; object-fit: cover;" alt="Placement Drive 5">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Placement Training</h5>
+                </div>
+            </div> -->
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#placementCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#placementCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    
+    <!-- Major Recruiters Section -->
+    <div class="recruiters-section mt-5">
+        <h3 class="head">Our Major Recruiters</h3>
+        <div class="recruiters-logos">
+            <div class="row">
+                <div class="col-md-2 col-4 mb-4">
+                    <img src="./Placements//Logos/amazon.png" alt="TCS" class="img-fluid company-logo">
+                </div>
+                <div class="col-md-2 col-4 mb-4">
+                    <img src="./Placements/Logos/infosys.png" alt="Infosys" class="img-fluid company-logo">
+                </div>
+                <div class="col-md-2 col-4 mb-4">
+                    <img src="./Placements/Logos/Cognizant.png" alt="Wipro" class="img-fluid company-logo">
+                </div>
+                <div class="col-md-2 col-4 mb-4">
+                    <img src="./Placements/Logos/avasoft.png" alt="Cognizant" class="img-fluid company-logo">
+                </div>
+                <div class="col-md-2 col-4 mb-4">
+                    <img src="./Placements/Logos/accenture.png" alt="HCL" class="img-fluid company-logo">
+                </div>
+                <div class="col-md-2 col-4 mb-4">
+                    <img src="./Placements/Logos/cadence.png" alt="Amazon" class="img-fluid company-logo">
+                </div>
+                <div class="col-md-2 col-4 mb-4">
+                    <img src="./Placements/Logos/intelsat.png" alt="Accenture" class="img-fluid company-logo">
+                </div>
+                <div class="col-md-2 col-4 mb-4">
+                    <img src="./Placements/Logos/candela.png" alt="IBM" class="img-fluid company-logo">
+                </div>
+                <div class="col-md-2 col-4 mb-4">
+                    <img src="./Placements/Logos/jman.png" alt="Capgemini" class="img-fluid company-logo">
+                </div>
+                <div class="col-md-2 col-4 mb-4">
+                    <img src="./Placements/Logos/juspay.png" alt="L&T" class="img-fluid company-logo">
+                </div>
+                <div class="col-md-2 col-4 mb-4">
+                    <img src="./Placements/Logos/kaar.png" alt="Tech Mahindra" class="img-fluid company-logo">
+                </div>
+                <div class="col-md-2 col-4 mb-4">
+                    <img src="./Placements/Logos/zoho.png" alt="Zoho" class="img-fluid company-logo">
+                </div>
+                 <div class="col-md-2 col-4 mb-4">
+                    <img src="./Placements/Logos/presidio.png" alt="Capgemini" class="img-fluid company-logo">
+                </div>
+                <div class="col-md-2 col-4 mb-4">
+                    <img src="./Placements/Logos/servicenow.png" alt="L&T" class="img-fluid company-logo">
+                </div>
+                <div class="col-md-2 col-4 mb-4">
+                    <img src="./Placements/Logos/solitan.png" alt="Tech Mahindra" class="img-fluid company-logo">
+                </div>
+              
+            </div>
+        </div>
+    </div>
             <ul class="pdf">
                 <li><a href="./Placements/placement2025.pdf"><h2>Placements 2021-2025<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
              </ul>  
           </div>
 
           <div class="tab-pane fade" id="v-pills-ed-cell" role="tabpanel" aria-labelledby="v-pills-ed-cell-tab">
-            <h2 class="head">ED Cell</h2>
-            <ul class="pdf">
-                <li><a href="./ED CELL.pdf"><h2>ED Cell<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
-             </ul>  
-          </div>
+    <h2 class="head">ED Cell</h2>
+    <div class="row gallery">
+        <!-- Gallery images -->
+        <div class="col-6 col-md-4 col-lg-3 mb-3">
+            <img src="./ED cell/img/img2.jpg" class="img-fluid rounded" alt="ED Cell Activity 1">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 mb-3">
+            <img src="./ED cell/img/img3.jpeg" class="img-fluid rounded" alt="ED Cell Activity 2">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 mb-3">
+            <img src="./ED cell/img/img4.jpeg" class="img-fluid rounded" alt="ED Cell Activity 3">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 mb-3">
+            <img src="./ED cell/img/img5.jpeg" class="img-fluid rounded" alt="ED Cell Activity 4">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 mb-3">
+            <img src="./ED cell/img/img6.jpg" class="img-fluid rounded" alt="ED Cell Activity 5">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 mb-3">
+            <img src="./ED cell/img/img7.jpg" class="img-fluid rounded" alt="ED Cell Activity 6">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 mb-3">
+            <img src="./ED cell/img/img8.jpg" class="img-fluid rounded" alt="ED Cell Activity 7">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 mb-3">
+            <img src="./ED cell/img/img9.png" class="img-fluid rounded" alt="ED Cell Activity 8">
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 mb-3">
+            <img src="./ED cell/img/img10.jpeg" class="img-fluid rounded" alt="ED Cell Activity 9">
+        </div>
+       
+    </div>
+    <ul class="pdf mt-3">
+        <li><a href="./ED cell/ED CELL.pdf"><h2>ED Cell<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
+    </ul>  
+</div>
 
           <div class="tab-pane fade" id="v-pills-sports" role="tabpanel" aria-labelledby="v-pills-sports-tab">
             <h2 class="head">sports</h2>
             <ul class="pdf">
-                <li><a href="./Intramural Sports Results.pdf"><h2>Sports Results<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
+                <li><a href="./Sports/Intramural Sports Results.pdf"><h2>Sports Results<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
              </ul>  
           </div>
 
@@ -1564,7 +1953,7 @@
           </div>
 <!--  -->
           <div class="tab-pane fade" id="v-pills-Mou" role="tabpanel" aria-labelledby="v-pills-Mou-tab">
-            <h2 class="head">Mou</h2>
+            <h2 class="head">MoU</h2>
             <ul class="pdf">
               <li><a href="./List of MoU_24-25.pdf"><h2>Mou 24-25<i class="fa-solid fa-right-long"></i> <span>Click Here</span></h2></a></li>
            </ul>
@@ -1713,43 +2102,17 @@
           </div>
           <!--  -->
 
-          <div class="tab-pane fade" id="v-pills-Teaching-and-Learning-Process" role="tabpanel" aria-labelledby="v-pills-Teaching-and-Learning-Process-tab">
-            <h2 class="head">Teaching and Learning Process</h2>
-           
-            <p align="justify"><b>The Teaching and Learning Process in the Electronics and Communication Engineering (ECE) department focuses on providing a structured and effective educational experience for students. It ensures that the curriculum aligns with industry needs, academic advancements, and learning methodologies to help students develop technical, analytical, and problem-solving skills.</b></p>
+         <div class="tab-pane fade" id="v-pills-Teaching-and-Learning-Process" role="tabpanel" aria-labelledby="v-pills-Teaching-and-Learning-Process-tab">
+          <h2 class="head">Teaching and Learning Process</h2>
+          
+          <p align="justify"><b>The Teaching and Learning Process in the Electronics and Communication Engineering (ECE) department focuses on providing a structured and effective educational experience for students. It ensures that the curriculum aligns with industry needs, academic advancements, and learning methodologies to help students develop technical, analytical, and problem-solving skills.</b></p>
 
-            <p align="justify"><b>The department adopts a student-centric approach, integrating modern teaching techniques, practical applications, research exposure, and industry collaborations. The process includes lectures, laboratory experiments, industry visits, research projects, and interactive sessions to enhance both theoretical and practical knowledge.</b></p>
-          </div>
-          <div class="tab-pane fade" id="v-pills-CO-PO" role="tabpanel" aria-labelledby="v-pills-CO-PO-tab">
-            <h2 class="head">CO-PO</h2>
-            <h2 class="head">PROGRAM OUTCOMES (POs)</h2>
-            <p align="justify"><b>Engineering Graduates will be able to:</b></p>
-            <ul>
-              <li><b>PO1: Engineering knowledge:</b> Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization to the solution of complex engineering problems.</li>
-              <li><b>PO2: Problem analysis:</b> Identify, formulate, review research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.</li>
-              <li><b>PO3: Design/development of solutions:</b> Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for public health and safety, and the cultural, societal, and environmental considerations.</li>
-              <li><b>PO4: Conduct investigations of complex problems:</b> Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.</li>
-              <li><b>PO5: Modern tool usage:</b> Create, select, and apply appropriate techniques, resources, and modern engineering and IT tools including prediction and modeling to complex engineering activities with an understanding of the limitations.</li>
-              <li><b>PO6: The engineer and society:</b> Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal, and cultural issues and the consequent responsibilities relevant to the professional engineering practice.</li>
-              <li><b>PO7: Environment and sustainability:</b> Understand the impact of professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of and need for sustainable development.</li>
-              <li><b>PO8: Ethics:</b> Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.</li>
-              <li><b>PO9: Individual and team work:</b> Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.</li>
-              <li><b>PO10: Communication:</b> Communicate effectively on complex engineering activities with the engineering community and with society at large, such as being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.</li>
-              <li><b>PO11: Project management and finance:</b> Demonstrate knowledge and understanding of the engineering and management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments.</li>
-              <li><b>PO12: Life-long learning:</b> Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change.</li>
-            </ul>
+          <p align="justify"><b>The department adopts a student-centric approach, integrating modern teaching techniques, practical applications, research exposure, and industry collaborations. The process includes lectures, laboratory experiments, industry visits, research projects, and interactive sessions to enhance both theoretical and practical knowledge.</b></p>
 
-          </div>
-          <div class="tab-pane fade" id="v-pills-PSO" role="tabpanel" aria-labelledby="v-pills-PSO-tab">
-            <h2 class="head">PSO</h2>
-            <h2 class="head">PROGRAM SPECIFIC OUTCOMES (PSOs)</h2>
-            <ul>
-              <li><b>PSO1:</b> To analyze, design, and develop solutions by applying foundational concepts of electronics and communication engineering.</li>
-              <li><b>PSO2:</b> To apply design principles and best practices for developing quality products for scientific and business applications.</li>
-              <li><b>PSO3:</b> To adapt to emerging information and communication technologies (ICT) to innovate ideas and solutions to existing/novel problems.</li>
-            </ul>
+          <a href="https://sites.google.com/view/innovative-tlp-sjce-ece" target="_blank" class="btn btn-primary mt-3">Explore Innovative TLP Activities</a>
+        </div>
 
-          </div>
+         
           <!--  -->
 
           <div class="tab-pane fade" id="v-pills-Feedback" role="tabpanel" aria-labelledby="v-pills-Feedback-tab">
@@ -1909,7 +2272,35 @@
   <!--  -->
   <!-- footer -->
   <div id="footer-container"></div>
+<!-- function for added buttons -->
+ <script>
+function navigateToSubnav(tabId) {
+  // First show all subnav items if they're hidden
+  const subnavs = document.querySelectorAll('.subnav');
+  subnavs.forEach(subnav => {
+    subnav.style.display = 'block';
+  });
+  
+  // Change the plus icon to minus
+  const icon = document.querySelector('#arrow-icon i');
+  if (icon) {
+    icon.classList.remove('fa-plus');
+    icon.classList.add('fa-minus');
+  }
+  
+  // Activate the corresponding tab
+  const tab = document.querySelector(`button[data-bs-target="#${tabId}"]`);
+  if (tab) {
+    const tabInstance = new bootstrap.Tab(tab);
+    tabInstance.show();
+    scrollToTop();
+  }
+}
 
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
   <script>
     // Function to fetch and insert the footer
     function includeFooter() {
@@ -1982,6 +2373,25 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-<!----my script--> 
+<!-- script for carosels -->
+ <!-- Bootstrap JS Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Carousel Initialization -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        var myCarousel = new bootstrap.Carousel(document.getElementById('achievementCarousel'), {
+            interval: 3000, 
+            wrap: true,   
+            pause: 'hover', 
+            keyboard: true, 
+            touch: true     
+        });
+        
+        
+        myCarousel.cycle();
+    });
+</script>
 
 </html>
